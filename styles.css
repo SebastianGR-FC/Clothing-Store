@@ -1,7 +1,7 @@
 /* General styling */
 body {
     background-color: #f8f8f8; /* Light gray background */
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Retro 2000s font */
+    font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
     color: #333;
@@ -13,7 +13,7 @@ header {
     color: white; /* White text */
     padding: 20px;
     text-align: center;
-    font-size: 1.5rem; /* Slightly larger font for the retro feel */
+    font-size: 1.2rem; /* Adjusted font size for Press Start 2P */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
@@ -34,12 +34,12 @@ section {
     padding: 40px 20px;
     text-align: center; /* Centered text in sections */
     background-color: white; /* White background */
-    font-size: 1.2rem; /* Larger font size for retro feel */
+    font-size: 0.9rem; /* Smaller font size for pixelated font */
 }
 
 /* Section headers */
 h2 {
-    font-size: 2rem; /* Retro larger headers */
+    font-size: 1.4rem; /* Adjusted size for the retro font */
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px #000; /* Text shadow for a retro look */
 }
@@ -58,7 +58,7 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
     text-align: center;
-    font-size: 1.1rem; /* Slightly larger font size */
+    font-size: 0.8rem; /* Smaller font size for the pixelated font */
     transition: transform 0.3s ease;
 }
 
@@ -78,7 +78,7 @@ footer {
     padding: 20px;
     background-color: black; /* Black background */
     color: white; /* White text */
-    font-size: 1.1rem; /* Slightly larger footer text */
+    font-size: 1rem; /* Adjusted footer text size */
 }
 
 /* Media Query for Mobile Devices */
