@@ -28,27 +28,29 @@ nav a:hover {
     color: #ccc; /* Light hover effect */
 }
 
-/* Pants section */
-#pants {
+/* Section styles */
+section {
     padding: 40px 20px;
-    text-align: center;
+    text-align: center; /* Centered text in sections */
+}
+
+#pants {
     background-color: #e0e0e0; /* Light gray for pants section */
 }
 
-/* T-shirts section */
 #tshirts {
-    padding: 40px 20px;
-    text-align: center;
     background-color: #d3d3d3; /* Medium gray for t-shirts section */
 }
 
-/* Dresses section */
 #dresses {
-    padding: 40px 20px;
-    text-align: center;
     background-color: #c0c0c0; /* Light silver for dresses section */
 }
 
+#contact {
+    background-color: #bfbfbf; /* Light neutral gray for contact section */
+}
+
+/* Section headers */
 h2 {
     font-size: 1.8rem;
     margin-bottom: 30px;
@@ -79,13 +81,6 @@ h2 {
     width: 100%;
     height: auto;
     border: 1px solid #ddd;
-}
-
-/* Contact section */
-#contact {
-    padding: 40px 20px;
-    background-color: #bfbfbf; /* Light neutral gray for contact section */
-    text-align: center;
 }
 
 /* Footer */
