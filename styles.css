@@ -1,7 +1,7 @@
 /* General styling */
 body {
     background-color: #f8f8f8; /* Light gray background */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Retro 2000s font */
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,19 +9,20 @@ body {
 
 /* Header */
 header {
-    background-color: white; /* Changed to white */
-    color: #4d4d4d; /* Dark gray for text */
+    background-color: black; /* Black background */
+    color: white; /* White text */
     padding: 20px;
     text-align: center;
+    font-size: 1.5rem; /* Slightly larger font for the retro feel */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 /* Navigation links */
 nav a {
-    color: #4d4d4d; /* Dark gray for nav links */
+    color: white; /* White nav links */
     margin: 0 15px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold; /* Bold for extra emphasis */
 }
 
 nav a:hover {
@@ -32,13 +33,15 @@ nav a:hover {
 section {
     padding: 40px 20px;
     text-align: center; /* Centered text in sections */
-    background-color: white; /* Changed to white */
+    background-color: white; /* White background */
+    font-size: 1.2rem; /* Larger font size for retro feel */
 }
 
 /* Section headers */
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Retro larger headers */
     margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #000; /* Text shadow for a retro look */
 }
 
 /* Product grid */
@@ -51,10 +54,11 @@ h2 {
 
 .product {
     width: calc(35% - 20px); /* Two items per row */
-    background-color: white; /* Changed to white */
+    background-color: white; /* White background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
     text-align: center;
+    font-size: 1.1rem; /* Slightly larger font size */
     transition: transform 0.3s ease;
 }
 
@@ -72,8 +76,9 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: white; /* Changed to white */
-    color: #4d4d4d; /* Dark gray for text */
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    font-size: 1.1rem; /* Slightly larger footer text */
 }
 
 /* Media Query for Mobile Devices */
