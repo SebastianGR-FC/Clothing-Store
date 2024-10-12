@@ -3,13 +3,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    margin-top: 60px; /* Adds space for the fixed transparent header */
 }
 
 header {
-    background-color: #000000; /* Black header */
+    background-color: rgba(0, 0, 0, 0.5); /* Black header with 50% transparency */
     color: white;
     padding: 10px;
     text-align: center;
+    position: fixed; /* Stays fixed at the top when scrolling */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures header stays above content */
 }
 
 nav a {
@@ -25,13 +30,13 @@ nav a {
 
 .product-grid {
     display: flex;
-    justify-content: center; /* Center the items in the grid */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 20px; /* Space between items */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .product {
-    width: calc(35% - 20px); /* Set width to 35% for a more compact layout */
+    width: calc(35% - 20px); /* Adjusted to show two items per row */
     text-align: center;
 }
 
