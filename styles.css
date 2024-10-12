@@ -1,6 +1,10 @@
 /* General styling */
 body {
-    background-color: black; /* Black background */
+    background-color: black; /* Fallback color */
+    background-image: url('images/background.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center; /* Center the image */
     font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
