@@ -25,13 +25,13 @@ nav a {
 
 .product-grid {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center; /* Center the items in the grid */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between items */
 }
 
 .product {
-    width: 200px;
+    width: calc(50% - 20px); /* Two items per row, accounting for gap */
     text-align: center;
 }
 
