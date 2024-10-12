@@ -7,33 +7,25 @@ body {
     color: #333;
 }
 
-/* Fixed header */
+/* Static header */
 header {
-    background-color: #f0f0f0; /* Neutral light background */
-    color: #333;
+    background-color: #333; /* Darker background for header */
+    color: white;
     padding: 20px;
     text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Adjust body content for fixed header */
-body {
-    padding-top: 80px; /* Space for the header */
-}
-
+/* Navigation links */
 nav a {
-    color: #333;
+    color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
 }
 
 nav a:hover {
-    color: #666; /* Subtle hover effect */
+    color: #ccc; /* Light hover effect */
 }
 
 /* Catalogue section */
@@ -86,6 +78,6 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #333; /* Darker background for footer */
     color: white;
 }
