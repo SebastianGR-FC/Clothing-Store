@@ -1,16 +1,15 @@
 /* General styling */
 body {
-    background-color: #f8f8f8; /* Light gray background */
+    background: linear-gradient(to bottom, #1a1a1a, #4d4d4d); /* Dark gradient background */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #fff; /* White text for better contrast */
 }
 
 /* Header */
 header {
-    background-color: #4d4d4d; /* Dark gray for header */
-    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark header */
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -35,19 +34,19 @@ section {
 }
 
 #pants {
-    background-color: #e0e0e0; /* Light gray for pants section */
+    background-color: rgba(200, 200, 200, 0.2); /* Light gray with transparency for pants section */
 }
 
 #tshirts {
-    background-color: #d3d3d3; /* Medium gray for t-shirts section */
+    background-color: rgba(180, 180, 180, 0.2); /* Medium gray with transparency for t-shirts section */
 }
 
 #dresses {
-    background-color: #c0c0c0; /* Light silver for dresses section */
+    background-color: rgba(160, 160, 160, 0.2); /* Light silver with transparency for dresses section */
 }
 
 #contact {
-    background-color: #bfbfbf; /* Light neutral gray for contact section */
+    background-color: rgba(140, 140, 140, 0.2); /* Light neutral gray with transparency for contact section */
 }
 
 /* Section headers */
@@ -87,6 +86,5 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #4d4d4d; /* Dark gray for footer */
-    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark footer */
 }
