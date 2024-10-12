@@ -1,80 +1,53 @@
-/* General styling */
 body {
-    background-color: #f8f8f8; /* Light gray background */
+    background-color: #f0f0f0; /* Gray background */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Header */
 header {
-    background-color: #4d4d4d; /* Dark gray for header */
+    background-color: #333; /* Dark header */
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: fixed; /* Make the header fixed */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
-/* Navigation links */
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: 600;
 }
 
-nav a:hover {
-    color: #ccc; /* Light hover effect */
-}
-
-/* Section styles */
 section {
-    padding: 40px 20px;
-    text-align: center; /* Centered text in sections */
-}
-
-#pants {
-    background-color: #e0e0e0; /* Light gray for pants section */
+    padding: 80px 20px 20px; /* Space for fixed header */
+    margin-top: 60px; /* Adjust margin for fixed header */
 }
 
 #tshirts {
-    background-color: #d3d3d3; /* Medium gray for t-shirts section */
+    background-color: #e0e0e0; /* Light gray for T-Shirts */
 }
 
-#dresses {
-    background-color: #c0c0c0; /* Light silver for dresses section */
+#pants {
+    background-color: #d0d0d0; /* Slightly darker gray for Pants */
 }
 
 #contact {
-    background-color: #bfbfbf; /* Light neutral gray for contact section */
+    background-color: #c0c0c0; /* Even darker gray for Contact */
 }
 
-/* Section headers */
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
-/* Product grid */
 .product-grid {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .product {
     width: calc(35% - 20px); /* Two items per row */
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
 }
 
 .product img {
@@ -83,10 +56,9 @@ h2 {
     border: 1px solid #ddd;
 }
 
-/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #4d4d4d; /* Dark gray for footer */
+    padding: 10px;
+    background-color: #333; /* Dark footer */
     color: white;
 }
