@@ -10,7 +10,7 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
-    position: fixed; /* Make the header fixed */
+    position: relative; /* Make the header fixed */
     width: 100%; /* Full width */
     z-index: 1000; /* Ensure it stays on top */
 }
