@@ -1,38 +1,80 @@
+/* General styling */
 body {
-    background-color: #f0f0f0; /* Gray background */
+    background-color: #f8f8f8; /* Light gray background */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
+/* Header */
 header {
-    background-color: #333; /* Dark header */
+    background-color: #4d4d4d; /* Dark gray for header */
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
+/* Navigation links */
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    font-weight: 600;
 }
 
-#catalogue {
-    padding: 20px;
-    text-align: center;
+nav a:hover {
+    color: #ccc; /* Light hover effect */
 }
 
+/* Section styles */
+section {
+    padding: 40px 20px;
+    text-align: center; /* Centered text in sections */
+}
+
+#pants {
+    background-color: #e0e0e0; /* Light gray for pants section */
+}
+
+#tshirts {
+    background-color: #d3d3d3; /* Medium gray for t-shirts section */
+}
+
+#dresses {
+    background-color: #c0c0c0; /* Light silver for dresses section */
+}
+
+#contact {
+    background-color: #bfbfbf; /* Light neutral gray for contact section */
+}
+
+/* Section headers */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* Product grid */
 .product-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .product {
-    width: 200px;
+    width: calc(35% - 20px); /* Two items per row */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
 }
 
 .product img {
@@ -41,6 +83,10 @@ nav a {
     border: 1px solid #ddd;
 }
 
-#contact {
+/* Footer */
+footer {
+    text-align: center;
     padding: 20px;
-    background-color: #f4f4f4; /*
+    background-color: #4d4d4d; /* Dark gray for footer */
+    color: white;
+}
