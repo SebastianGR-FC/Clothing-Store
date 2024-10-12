@@ -10,9 +10,6 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
-    position: relative; /* Make the header fixed */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it stays on top */
 }
 
 nav a {
@@ -21,21 +18,9 @@ nav a {
     text-decoration: none;
 }
 
-section {
-    padding: 80px 20px 20px; /* Space for fixed header */
-    margin-top: 60px; /* Adjust margin for fixed header */
-}
-
-#tshirts {
-    background-color: #e0e0e0; /* Light gray for T-Shirts */
-}
-
-#pants {
-    background-color: #d0d0d0; /* Slightly darker gray for Pants */
-}
-
-#contact {
-    background-color: #c0c0c0; /* Even darker gray for Contact */
+#catalogue {
+    padding: 20px;
+    text-align: center;
 }
 
 .product-grid {
@@ -46,7 +31,7 @@ section {
 }
 
 .product {
-    width: calc(35% - 20px); /* Two items per row */
+    width: 200px;
     text-align: center;
 }
 
@@ -56,9 +41,6 @@ section {
     border: 1px solid #ddd;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333; /* Dark footer */
-    color: white;
-}
+#contact {
+    padding: 20px;
+    background-color: #f4f4f4; /*
