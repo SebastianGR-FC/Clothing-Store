@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clothing Store Catalogue</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-35ZDRH0CL3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-35ZDRH0CL3');
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-35ZDRH0CL3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-35ZDRH0CL3');
-</script>
 <body>
   <header>
     <h1>Clothing Store</h1>
@@ -25,12 +24,8 @@
     </nav>
   </header>
 
-
-  <section id="catalogue">
-    <h2>Clothing Catalogue</h2>
-
-    <!-- T-Shirts Section -->
-    <h3>T-Shirts</h3>
+  <section id="tshirts">
+    <h2>T-Shirts</h2>
     <div class="product-grid">
       <div class="product">
         <img src="images/shirt1.jpg" alt="Shirt 1">
@@ -45,9 +40,10 @@
         <p>Size: M</p>
       </div>
     </div>
+  </section>
 
-    <!-- Pants Section -->
-    <h3>Pants</h3>
+  <section id="pants">
+    <h2>Pants</h2>
     <div class="product-grid">
       <div class="product">
         <img src="images/pants1.jpg" alt="Pants 1">
@@ -62,21 +58,18 @@
         <p>Size: S</p>
       </div>
       <div class="product">
-        <img src="images/pants3.jpg" alt="Pants 2">
-        <p><strong>Pants 2</strong></p>
+        <img src="images/pants3.jpg" alt="Pants 3">
+        <p><strong>Pants 3</strong></p>
         <p>$10.99</p>
         <p>Size: M</p>
       </div>
       <div class="product">
-        <img src="images/pants4.jpg" alt="Pants 2">
+        <img src="images/pants4.jpg" alt="Pants 4">
         <p><strong>Pants 4</strong></p>
         <p>$20.99</p>
         <p>Size: S</p>
       </div>
     </div>
-
-    <!-- You can continue to add more sections for different categories -->
-    
   </section>
 
   <section id="contact">
