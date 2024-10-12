@@ -7,9 +7,9 @@ body {
     color: #333;
 }
 
-/* Static header */
+/* Header */
 header {
-    background-color: #333; /* Darker background for header */
+    background-color: #4d4d4d; /* Dark gray for header */
     color: white;
     padding: 20px;
     text-align: center;
@@ -32,7 +32,7 @@ nav a:hover {
 #catalogue {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: #e0e0e0; /* Light gray for catalogue */
 }
 
 h2 {
@@ -70,7 +70,7 @@ h2 {
 /* Contact section */
 #contact {
     padding: 40px 20px;
-    background-color: #f0f0f0; /* Neutral background for contact section */
+    background-color: #d3d3d3; /* Medium gray for contact section */
     text-align: center;
 }
 
@@ -78,6 +78,6 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333; /* Darker background for footer */
+    background-color: #4d4d4d; /* Darker gray for footer */
     color: white;
 }
