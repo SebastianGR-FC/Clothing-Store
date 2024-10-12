@@ -11,7 +11,7 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
-    position: fixed; /* Stays fixed at the top when scrolling */
+    position: relative; /* Stays fixed at the top when scrolling */
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensures header stays above content */
