@@ -1,7 +1,7 @@
 /* General styling */
 body {
     background-color: black; /* Fallback color */
-    background-image: url('https://images.unsplash.com/photo-1620430341397-833251ed37b5?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Unsplash image */
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/refs/heads/main/images/background.jpg?token=GHSAT0AAAAAACY2KFNIZI5YYCWTBT2466MEZYK5PZA'); /* Unsplash image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
     background-position: center; /* Center the image */
