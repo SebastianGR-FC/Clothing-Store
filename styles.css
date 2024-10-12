@@ -1,39 +1,39 @@
 /* General styling */
 body {
-    background-color: #FFFFE4; /* Soft cream background */
+    background-color: black; /* Black background */
     font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
-    color: black; /* Black text */
+    color: white; /* White text */
 }
 
 /* Header */
 header {
-    background-color: #FFFFE4; /* Soft cream background */
-    color: black; /* Black text */
+    background-color: black; /* Black background */
+    color: white; /* White text */
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Soft shadow */
 }
 
 /* Navigation links */
 nav a {
-    color: black; /* Black nav links */
+    color: white; /* White nav links */
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #555; /* Darker hover effect */
+    color: #ccc; /* Lighter hover effect */
 }
 
 /* Section styles */
 section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #FFFFE4; /* Soft cream background */
+    background-color: black; /* Black background */
     font-size: 0.9rem;
 }
 
@@ -42,7 +42,7 @@ h2 {
     font-size: 1.4rem;
     margin-bottom: 30px;
     text-shadow: none; /* Remove text shadow for cleaner look */
-    color: black; /* Black section headers */
+    color: white; /* White section headers */
 }
 
 /* Product grid */
@@ -55,12 +55,12 @@ h2 {
 
 .product {
     width: calc(35% - 20px); /* Two items per row */
-    background-color: #FFFFE4; /* Soft cream background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: black; /* Black background */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle shadow */
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
-    color: black; /* Black product text */
+    color: white; /* White product text */
     transition: transform 0.3s ease;
 }
 
@@ -78,8 +78,8 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #FFFFE4; /* Soft cream background */
-    color: black; /* Black text */
+    background-color: black; /* Black background */
+    color: white; /* White text */
     font-size: 1rem;
 }
 
