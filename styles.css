@@ -64,7 +64,7 @@ h2 {
 }
 
 .product:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
+    transform: scale(1.1); /* Increased zoom on hover */
 }
 
 .product img {
