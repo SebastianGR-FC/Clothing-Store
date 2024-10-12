@@ -31,7 +31,7 @@ nav a {
 }
 
 .product {
-    width: calc(50% - 20px); /* Two items per row, accounting for gap */
+    width: calc(40% - 20px); /* Two items per row, accounting for gap */
     text-align: center;
 }
 
