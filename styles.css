@@ -1,134 +1,91 @@
 /* General styling */
 body {
-    background-color: #fafafa; /* Very light gray background for a clean look */
-    font-family: 'Poppins', sans-serif; /* Elegant, modern font */
+    background-color: #f8f8f8; /* Light gray for a neutral background */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    margin-top: 60px; /* Space for the fixed header */
     color: #333;
 }
 
-/* Styling for the header */
+/* Fixed header */
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Black with some transparency */
-    color: #f8f8f8; /* Softer white text */
+    background-color: #f0f0f0; /* Neutral light background */
+    color: #333;
     padding: 20px;
     text-align: center;
-    position: fixed; /* Fixed so it stays at the top */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for elegance */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Styling for navigation */
+/* Adjust body content for fixed header */
+body {
+    padding-top: 80px; /* Space for the header */
+}
+
 nav a {
-    color: #f8f8f8;
+    color: #333;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 nav a:hover {
-    color: #ff6f61; /* Fun, playful hover effect */
+    color: #666; /* Subtle hover effect */
 }
 
-/* Styling for the catalogue section */
+/* Catalogue section */
 #catalogue {
     padding: 40px 20px;
     text-align: center;
     background-color: #fff;
-    margin-top: 20px;
 }
 
 h2 {
-    font-size: 2rem;
-    color: #333;
+    font-size: 1.8rem;
     margin-bottom: 30px;
-    position: relative;
 }
 
-h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: #ff6f61; /* Fun accent color */
-    margin: 10px auto;
-}
-
-/* Styling for product grid */
+/* Product grid */
 .product-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* More spacing for a clean layout */
+    gap: 20px;
 }
 
 .product {
-    width: calc(35% - 30px); /* Two items per row with dynamic width */
+    width: calc(35% - 20px); /* Two items per row */
     background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
-    border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
     transition: transform 0.3s ease;
 }
 
 .product:hover {
-    transform: scale(1.05); /* Fun zoom effect on hover */
+    transform: scale(1.02); /* Slight zoom on hover */
 }
 
 .product img {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid #ff6f61; /* Adds an accent border */
+    border: 1px solid #ddd;
 }
 
-.product p {
-    margin: 15px 0;
-    color: #555;
-}
-
-strong {
-    color: #333;
-    font-size: 1.1rem;
-}
-
-/* Styling for contact section */
+/* Contact section */
 #contact {
     padding: 40px 20px;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0; /* Neutral background for contact section */
     text-align: center;
-    margin-top: 40px;
 }
 
-#contact h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-#contact p {
-    font-size: 1.1rem;
-}
-
-#contact a {
-    color: #ff6f61;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-#contact a:hover {
-    color: #333;
-}
-
-/* Styling for the footer */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: white;
-    margin-top: 20px;
 }
