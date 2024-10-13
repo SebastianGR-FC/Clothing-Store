@@ -1,7 +1,7 @@
 /* General styling for Dark Mode (default) */
 body {
     background-color: black; /* Dark background for the entire page */
-    background-image: url('images/background/background_dark.jpg'); /* Correct background image for dark mode */
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_dark.jpg'); /* Correct background image for dark mode */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
     background-attachment: fixed; /* Fix the background image in place */
@@ -17,7 +17,7 @@ body {
 @media (prefers-color-scheme: light) {
     body {
         background-color: white; /* Light background */
-        background-image: url('images/background/background_light.jpg'); /* Custom light mode image */
+        background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg'); /* Custom light mode image */
         color: black; /* Black text for light mode */
     }
 }
