@@ -61,7 +61,7 @@ h2 {
 
 /* Product styling */
 .product {
-    width: calc(35% - 20px); /* Two items per row or adjust as needed */
+    width: calc(35% - 20px); /* Two items per row */
     background-color: black; /* Black background */
     padding: 20px;
     text-align: center;
@@ -93,9 +93,6 @@ footer {
     .product {
         width: calc(100% - 40px); /* One item per row on mobile */
     }
-    .product-grid {
-        justify-content: center; /* Center items on mobile */
-    }
 }
 
 @media (min-width: 769px) {
@@ -103,9 +100,20 @@ footer {
         justify-content: flex-start; /* Align items to the start on larger screens */
     }
 
-    /* Center a single item when there is only one in a row */
+    /* Center single item */
     .product-grid > .product {
         flex: 0 0 auto; /* Prevent flex items from stretching */
-        margin: 0 auto; /* Center the item */
+    }
+
+    /* Centering logic */
+    .product-grid {
+        justify-content: center; /* Center all items */
+    }
+
+    /* When there's only one item, center it */
+    .product-grid:has(.product):only-child {
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Center single item */
+        width: 100%; /* Full width */
     }
 }
