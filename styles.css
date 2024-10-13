@@ -5,6 +5,11 @@ body {
     font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
+    background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_light.jpg'); /* Light mode background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-attachment: fixed; /* Fix the background image in place */
+    background-position: center center; /* Center the image */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background and text color */
 }
 
@@ -146,6 +151,7 @@ footer {
     body {
         background-color: black; /* Set black background for dark mode */
         color: white; /* White text for dark mode */
+        background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_dark.jpg'); /* Dark mode background image */
     }
 
     header {
