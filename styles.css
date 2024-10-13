@@ -81,8 +81,6 @@ h2 {
     width: 300%; /* Make the width larger for the flashlight effect */
     height: 300%; /* Make the height larger for the flashlight effect */
     background: rgba(255, 255, 255, 0.4); /* Light effect */
-    box-shadow: 0 0 60px rgba(255, 255, 255, 0.8), 0 0 100px rgba(255, 255, 255, 0.5); /* Strong glow effect */
-    border-radius: 50%; /* Make it circular */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Smooth transition */
     z-index: -1; /* Place behind the product */
