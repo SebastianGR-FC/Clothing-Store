@@ -193,4 +193,8 @@ footer {
         background-color: black; /* Black footer background */
         color: white; /* White footer text */
     }
+
+    .product {
+        color: white; /* White product text in dark mode */
+    }
 }
