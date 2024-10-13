@@ -17,12 +17,6 @@
     gtag('js', new Date());
     gtag('config', 'G-35ZDRH0CL3');
   </script>
-  <style>
-    /* Add this CSS rule to your styles.css file or within the <style> tags */
-    .nav-purple {
-        color: purple; /* Change the color to purple */
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -30,8 +24,10 @@
     <nav>
         <a class="nav-link" href="#playeras">Playeras</a>
         <a class="nav-link" href="#pantalones">Pantalones</a>
-        <a class="nav-link nav-purple" href="#contact">Ordena</a> <!-- Added class here -->
+        <a class="nav-link nav-purple" href="#contact">Ordena</a>
     </nav>
+    <!-- Dark/Light Mode Toggle Button -->
+    <button id="mode-toggle" class="toggle-btn">🌙</button>
   </header>
 
   <section id="playeras">
@@ -115,6 +111,22 @@
             window.scrollTo(0, 0); // Scroll to top
         }, 0); // Small delay to ensure scroll to top works
     };
+
+    // Dark/Light Mode Toggle
+    const toggleButton = document.getElementById('mode-toggle');
+    const currentMode = localStorage.getItem('mode') || 'dark'; // Check local storage for the saved mode
+
+    if (currentMode === 'light') {
+        document.body.classList.add('light-mode'); // Set light mode if saved in local storage
+        toggleButton.textContent = '🌞'; // Change icon
+    }
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const isLightMode = document.body.classList.contains('light-mode');
+      toggleButton.textContent = isLightMode ? '🌞' : '🌙'; // Change icon based on the mode
+      localStorage.setItem('mode', isLightMode ? 'light' : 'dark'); // Save the mode in local storage
+    });
   </script>
 </body>
 </html>
