@@ -109,11 +109,9 @@
         });
     });
 
-    // Remove hash from URL on page load
+    // Scroll to the top on page load
     window.onload = function() {
-        if (window.location.hash) {
-            history.replaceState("", document.title, window.location.pathname + window.location.search);
-        }
+        window.scrollTo(0, 0); // Scroll to top
     };
   </script>
 </body>
