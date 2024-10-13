@@ -90,43 +90,14 @@ h2 {
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-/* Dark Mode Product Styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: black; /* Set black background for dark mode */
-        color: white; /* White text for dark mode */
-        background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_dark.jpg'); /* Dark mode background image */
-    }
+.product:hover {
+    transform: scale(1.1); /* Increased zoom on hover */
+}
 
-    header {
-        background-color: black; /* Black header background */
-        color: white; /* White header text */
-    }
-
-    nav a {
-        color: white; /* White nav links in dark mode */
-    }
-
-    nav a:hover {
-        color: #ccc; /* Lighter hover effect in dark mode */
-    }
-
-    section {
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for sections */
-    }
-
-    h2 {
-        color: white; /* White section headers in dark mode */
-    }
-
-    footer {
-        background-color: black; /* Black footer background */
-        color: white; /* White footer text */
-    }
-
-    .product {
-        color: white; /* Change product text to white in dark mode */
-    }
+.product img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Remove border from images */
 }
 
 /* Center products in mobile view */
@@ -172,5 +143,40 @@ footer {
         width: 100%; /* Make buttons full-width */
         text-align: center; /* Center text */
         margin: 5px 0; /* Margin for spacing */
+    }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black; /* Set black background for dark mode */
+        color: white; /* White text for dark mode */
+        background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_dark.jpg'); /* Dark mode background image */
+    }
+
+    header {
+        background-color: black; /* Black header background */
+        color: white; /* White header text */
+    }
+
+    nav a {
+        color: white; /* White nav links in dark mode */
+    }
+
+    nav a:hover {
+        color: #ccc; /* Lighter hover effect in dark mode */
+    }
+
+    section {
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for sections */
+    }
+
+    h2 {
+        color: white; /* White section headers in dark mode */
+    }
+
+    footer {
+        background-color: black; /* Black footer background */
+        color: white; /* White footer text */
     }
 }
