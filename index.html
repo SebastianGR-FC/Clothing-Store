@@ -90,5 +90,43 @@
   <footer>
     <p>&copy; 2024 Mi Tienda de Ropa</p>
   </footer>
+
+  <script>
+    // Custom smooth scroll function
+    function smoothScroll(target, duration) {
+        const targetElement = document.querySelector(target);
+        const startPosition = window.pageYOffset; // Current scroll position
+        const targetPosition = targetElement.getBoundingClientRect().top + startPosition; // Target scroll position
+        const distance = targetPosition - startPosition; // Distance to scroll
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime; // Set start time
+            const timeElapsed = currentTime - startTime; // Time elapsed
+            const run = ease(timeElapsed, startPosition, distance, duration); // Calculate position
+            window.scrollTo(0, run); // Scroll to position
+
+            if (timeElapsed < duration) requestAnimationFrame(animation); // Continue if duration not reached
+        }
+
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b; // Ease in
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b; // Ease out
+        }
+
+        requestAnimationFrame(animation); // Start the animation
+    }
+
+    // Add event listeners to navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+            const targetId = this.getAttribute('href'); // Get the target section id
+            smoothScroll(targetId, 1000); // Scroll to the target section over 1000ms (1 second)
+        });
+    });
+  </script>
 </body>
 </html>
