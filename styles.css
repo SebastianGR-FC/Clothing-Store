@@ -10,7 +10,6 @@ body {
     margin: 0;
     padding: 0;
     color: white; /* White text */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 /* Smooth Scrolling */
@@ -25,15 +24,13 @@ header {
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Soft shadow */
-    transition: background-color 0.3s ease; /* Smooth transition for header */
 }
 
 /* Navigation links */
 nav {
     display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping */
     justify-content: center; /* Center the buttons */
+    margin: 20px 0; /* Margin for spacing */
 }
 
 nav a {
@@ -41,12 +38,6 @@ nav a {
     margin: 10px; /* Add some margin for spacing */
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for scaling and color */
-}
-
-nav a:hover {
-    color: #ccc; /* Lighter hover effect */
-    transform: scale(1.1); /* Zoom effect on hover */
 }
 
 /* Section styles */
@@ -54,19 +45,6 @@ section {
     padding: 60px 20px; /* Increased padding to avoid overlap */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    font-size: 1.1rem;
-    position: relative;
-    z-index: 1; /* Ensure section content appears above background */
-}
-
-/* Section headers */
-h2 {
-    font-size: 1.6rem; /* Slightly larger font for headers */
-    margin-bottom: 50px; /* Larger margin to avoid hover effect overlap */
-    text-shadow: none; /* Remove text shadow for cleaner look */
-    color: white; /* White section headers */
-    position: relative; /* Make sure it stays clear of surrounding content */
-    z-index: 2; /* Ensure section header stays above background images */
 }
 
 /* Product grid */
@@ -79,54 +57,19 @@ h2 {
 
 /* Product styling */
 .product {
-    width: calc(25% - 20px); /* Each item takes 25% of the container width minus the gap for 4 items per row */
-    background-color: transparent; /* Set background to transparent */
-    padding: 20px;
+    width: calc(25% - 20px); /* Each item takes 25% of the container width */
     text-align: center;
-    font-size: 0.8rem;
-    color: white; /* White product text */
-    transition: transform 0.3s ease; /* Transition for scaling */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-}
-
-.product:hover {
-    transform: scale(1.1); /* Increased zoom on hover */
 }
 
 .product img {
-    width: 100%;
+    width: 100%; /* Make images full width of the product container */
     height: auto; /* Maintain aspect ratio */
-    border: none; /* Remove border from images */
-}
-
-/* Center last single product on odd rows */
-.product-grid:after {
-    content: '';
-    flex: auto;
-}
-
-.product-grid > .product:nth-child(odd):last-child {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(25% - 20px); /* Same width as others */
-    display: block; /* Ensure it's treated like a block element */
 }
 
 /* Center products in mobile view */
 @media (max-width: 768px) {
-    .product-grid {
-        justify-content: center; /* Ensure items are centered in mobile */
-    }
-
     .product {
         width: calc(100% - 40px); /* One item per row on mobile */
-    }
-
-    /* Adjust margin for better centering of last product */
-    .product-grid > .product:last-child {
-        margin-left: auto;
-        margin-right: auto;
-        width: calc(100% - 40px); /* Ensure the last item is also full width */
     }
 }
 
@@ -135,20 +78,4 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-    color: white; /* White text */
-    font-size: 1rem;
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        align-items: center; /* Center align items */
-    }
-
-    nav a {
-        width: 100%; /* Make buttons full-width */
-        text-align: center; /* Center text */
-        margin: 5px 0; /* Margin for spacing */
-    }
 }
