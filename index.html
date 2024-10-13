@@ -18,174 +18,20 @@
     gtag('config', 'G-35ZDRH0CL3');
   </script>
   <style>
-    /* General styling for both modes */
-    body {
-        background-color: black;
-        font-family: 'Press Start 2P', cursive;
-        margin: 0;
-        padding: 0;
-        color: white;
-        transition: background-color 0.3s ease;
-    }
-
-    /* Dark mode (default) */
-    body.dark-mode {
-        background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_dark.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center;
-        color: white;
-    }
-
-    /* Light mode */
-    body.light-mode {
-        background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg');
-        background-color: white; /* In case the image doesn't load, default to white */
-        color: black; /* Text color for light mode */
-    }
-
-    /* Smooth Scrolling */
-    html {
-        scroll-behavior: smooth;
-    }
-
-    /* Header */
-    header {
-        background-color: black; /* Solid black background */
-        color: white; /* White text */
-        padding: 20px;
-        text-align: center;
-        font-size: 1.2rem;
-        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Soft shadow */
-        transition: background-color 0.3s ease; /* Smooth transition for header */
-    }
-
-    /* Navigation links */
-    nav {
-        display: flex; /* Use flexbox for layout */
-        flex-wrap: wrap; /* Allow wrapping */
-        justify-content: center; /* Center the buttons */
-    }
-
-    nav a {
-        color: white; /* White nav links */
-        margin: 10px; /* Add some margin for spacing */
-        text-decoration: none;
-        font-weight: bold;
-        transition: transform 0.3s ease, color 0.3s ease; /* Transition for scaling and color */
-    }
-
-    nav a:hover {
-        color: #ccc; /* Lighter hover effect */
-        transform: scale(1.1); /* Zoom effect on hover */
-    }
-
-    /* Section styles */
-    section {
-        padding: 60px 20px; /* Increased padding to avoid overlap */
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-        font-size: 1.1rem;
-        position: relative;
-        z-index: 1; /* Ensure section content appears above background */
-    }
-
-    /* Section headers */
-    h2 {
-        font-size: 1.6rem; /* Slightly larger font for headers */
-        margin-bottom: 50px; /* Larger margin to avoid hover effect overlap */
-        text-shadow: none; /* Remove text shadow for cleaner look */
-        color: white; /* White section headers */
-        position: relative; /* Make sure it stays clear of surrounding content */
-        z-index: 2; /* Ensure section header stays above background images */
-    }
-
-    /* Product grid */
-    .product-grid {
-        display: flex;
-        justify-content: center; /* Center items in the grid */
-        flex-wrap: wrap; /* Allow items to wrap */
-        gap: 20px; /* Space between items */
-    }
-
-    /* Product styling */
-    .product {
-        width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
-        background-color: transparent; /* Set background to transparent */
-        padding: 20px;
-        text-align: center;
-        font-size: 0.8rem;
-        color: white; /* White product text */
-        transition: transform 0.3s ease; /* Transition for scaling */
-        box-sizing: border-box; /* Ensure padding is included in the width */
-    }
-
-    .product:hover {
-        transform: scale(1.1); /* Increased zoom on hover */
-    }
-
-    .product img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-        border: none; /* Remove border from images */
-    }
-
-    /* Center products in mobile view */
-    @media (max-width: 768px) {
-        .product-grid {
-            display: flex; /* Ensure the grid is still a flex container */
-            justify-content: center; /* Center the items */
-            flex-direction: column; /* Stack items in a column for mobile */
-            align-items: center; /* Center the items horizontally */
-        }
-
-        .product {
-            width: 100%; /* Full width for one item per row on mobile */
-            max-width: 400px; /* Set a max width for the product */
-            margin: 10px 0; /* Margin for spacing on top and bottom */
-        }
-        
-        /* Centering for odd-numbered products */
-        .product-grid::after {
-            content: '';
-            flex: auto; /* This allows any extra space to be distributed evenly */
-        }
-    }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-        color: white; /* White text */
-        font-size: 1rem;
-    }
-
-    /* Media Query for Mobile Devices */
-    @media (max-width: 768px) {
-        nav {
-            flex-direction: column; /* Stack buttons vertically on mobile */
-            align-items: center; /* Center align items */
-        }
-
-        nav a {
-            width: 100%; /* Make buttons full-width */
-            text-align: center; /* Center text */
-            margin: 5px 0; /* Margin for spacing */
-        }
+    /* Add this CSS rule to your styles.css file or within the <style> tags */
+    .nav-purple {
+        color: purple; /* Change the color to purple */
     }
   </style>
 </head>
-<body class="dark-mode">
+<body>
   <header>
     <h1>Catálogo de Ropa</h1>
     <nav>
         <a class="nav-link" href="#playeras">Playeras</a>
         <a class="nav-link" href="#pantalones">Pantalones</a>
-        <a class="nav-link nav-purple" href="#contact">Ordena</a>
+        <a class="nav-link nav-purple" href="#contact">Ordena</a> <!-- Added class here -->
     </nav>
-    <button id="mode-toggle">Toggle Mode</button>
   </header>
 
   <section id="playeras">
@@ -235,4 +81,40 @@
       </div>
       <div class="product">
         <img src="images/pants4.png" alt="Pantalones 4">
-        <p><strong>Pantalones 4</
+        <p><strong>Pantalones 4</strong></p>
+        <p>$20.99</p>
+        <p>Talla: S</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contáctanos</h2>
+    <p>Teléfono: <a href="https://api.whatsapp.com/send?phone=4422742817">WhatsApp</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Mi Tienda de Ropa</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling function
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+            const targetId = this.getAttribute('href'); // Get the target section id
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth' // Smooth scroll behavior
+            });
+        });
+    });
+
+    // Scroll to the top on page load
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0); // Scroll to top
+        }, 0); // Small delay to ensure scroll to top works
+    };
+  </script>
+</body>
+</html>
