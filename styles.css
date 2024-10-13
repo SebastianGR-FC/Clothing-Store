@@ -67,7 +67,7 @@ h2 {
 
 /* Product styling */
 .product {
-    flex: 1 0 calc(50% - 20px); /* Make sure each item takes 50% of the width minus gap */
+    width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
     background-color: black; /* Black background */
     padding: 20px;
     text-align: center;
@@ -86,10 +86,10 @@ h2 {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Make last product same size and center when alone in a row */
+/* Make last product in an odd-numbered row centered and the same size */
 .product-grid > .product:nth-child(odd):last-child {
-    flex: 1 0 calc(50% - 20px); /* Maintain same size as others */
-    margin-left: calc(25% + 10px); /* Center the item when alone in the row */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Footer */
@@ -119,7 +119,6 @@ footer {
     }
 
     .product-grid > .product:nth-child(odd):last-child {
-        flex: 1 0 calc(100% - 40px); /* Ensure it is full-width on mobile */
         margin-left: 0; /* No centering needed for mobile */
     }
 }
