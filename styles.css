@@ -22,16 +22,20 @@ header {
 }
 
 /* Navigation links */
-nav a {
-    color: white; /* White nav links */
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+nav {
+    margin-top: 10px; /* Add some spacing between the title and nav links */
+}
+
+.nav-link {
+    color: white; /* White text */
+    margin: 0 15px; /* Margin around links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
     transition: transform 0.3s ease; /* Transition for scaling */
 }
 
-nav a:hover {
-    color: #ccc; /* Lighter hover effect */
+/* Hover effect for links */
+.nav-link:hover {
     transform: scale(1.1); /* Zoom effect on hover */
 }
 
