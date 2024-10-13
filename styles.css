@@ -84,7 +84,7 @@ h2 {
     background-color: transparent; /* Keep product background transparent */
     padding: 20px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem; /* Increased font size for product descriptions */
     color: black; /* Black product text */
     transition: transform 0.3s ease; /* Transition for scaling */
     box-sizing: border-box; /* Ensure padding is included in the width */
