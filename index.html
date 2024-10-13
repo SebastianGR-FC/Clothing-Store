@@ -108,6 +108,13 @@
             });
         });
     });
+
+    // Remove hash from URL on page load
+    window.onload = function() {
+        if (window.location.hash) {
+            history.replaceState("", document.title, window.location.pathname + window.location.search);
+        }
+    };
   </script>
 </body>
 </html>
