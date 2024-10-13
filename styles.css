@@ -113,6 +113,12 @@ h2 {
         max-width: 400px; /* Set a max width for the product */
         margin: 10px 0; /* Margin for spacing on top and bottom */
     }
+    
+    /* Centering for odd-numbered products */
+    .product-grid::after {
+        content: '';
+        flex: auto; /* This allows any extra space to be distributed evenly */
+    }
 }
 
 /* Footer */
