@@ -49,6 +49,11 @@ h2 {
     margin-bottom: 30px;
     text-shadow: none; /* Remove text shadow for cleaner look */
     color: white; /* White section headers */
+    transition: transform 0.3s ease; /* Transition for scaling */
+}
+
+h2:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
 /* Product grid */
