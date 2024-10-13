@@ -1,7 +1,7 @@
 /* General styling */
 body {
     background-color: black; /* Fallback color */
-    background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/blob/32b2d0433e5778ddea08daff039de59fbae4ab89/images/background.jpg'); /* Path to your background image */
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/32b2d0433e5778ddea08daff039de59fbae4ab89/images/background.jpg'); /* Path to your background image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
     background-position: center; /* Center the image */
