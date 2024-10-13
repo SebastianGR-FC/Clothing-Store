@@ -1,34 +1,30 @@
-/* General styling for both modes */
+/* General styling */
 body {
-    background-color: black;
-    font-family: 'Press Start 2P', cursive;
+    background-color: black; /* Fallback for unsupported browsers */
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_dark.jpg'); /* Dark mode background */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-attachment: fixed; /* Fix the background image in place */
+    background-position: center center; /* Center the image */
+    font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
-    color: white;
-    transition: background-color 0.3s ease;
+    color: white; /* White text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-/* Dark mode (default) */
-body {
-    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_dark.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-}
-
-/* Light mode */
+/* Light mode background */
 @media (prefers-color-scheme: light) {
     body {
-        background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg');
-        background-color: white; /* In case the image doesn't load, default to white */
-        color: black; /* Text color for light mode */
+        background-color: white; /* Fallback for unsupported browsers */
+        background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg'); /* Light mode background */
+        color: black; /* Black text for light mode */
     }
 }
 
 /* Smooth Scrolling */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 /* Header */
@@ -126,7 +122,7 @@ h2 {
         max-width: 400px; /* Set a max width for the product */
         margin: 10px 0; /* Margin for spacing on top and bottom */
     }
-    
+
     /* Centering for odd-numbered products */
     .product-grid::after {
         content: '';
