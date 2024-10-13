@@ -64,18 +64,23 @@ h2 {
     text-align: center;
     font-size: 0.8rem;
     color: white; /* White product text */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for box-shadow */
+    transition: transform 0.3s ease; /* Transition for scaling */
 }
 
 .product:hover {
     transform: scale(1.1); /* Increased zoom on hover */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Slight glowing effect */
 }
 
 .product img {
     width: 100%;
     height: auto;
     /* No borders, no shadows */
+    transition: filter 0.3s ease; /* Transition for filter */
+}
+
+.product:hover img {
+    filter: brightness(1.5); /* Brightness effect on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glowing effect */
 }
 
 /* Footer */
