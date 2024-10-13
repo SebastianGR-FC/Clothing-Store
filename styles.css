@@ -94,6 +94,12 @@ h2 {
     transform: scale(1.1); /* Increased zoom on hover */
 }
 
+/* Smooth active effect for mobile */
+.product:active {
+    transform: scale(1.05); /* Slightly scale down to create a touch effect */
+    transition: transform 0.2s ease; /* Transition for the active state */
+}
+
 .product img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
@@ -119,6 +125,14 @@ h2 {
     .product-grid::after {
         content: '';
         flex: auto; /* This allows any extra space to be distributed evenly */
+    }
+
+    .product {
+        transition: transform 0.3s ease; /* Ensure transition is applied on mobile */
+    }
+
+    .product:hover {
+        transform: scale(1.1); /* Keep hover effect on mobile */
     }
 }
 
@@ -178,10 +192,5 @@ footer {
     footer {
         background-color: black; /* Black footer background */
         color: white; /* White footer text */
-    }
-
-    /* Change product description color to white in dark mode */
-    .product {
-        color: white; /* White product text in dark mode */
     }
 }
