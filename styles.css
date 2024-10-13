@@ -99,29 +99,19 @@ h2 {
     border: none; /* Remove border from images */
 }
 
-/* Center last single product on odd rows */
-.product-grid:after {
-    content: '';
-    flex: auto;
-}
-
-.product-grid > .product:nth-child(odd):last-child {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(50% - 20px); /* Same width as others */
-    display: block; /* Ensure it's treated like a block element */
-}
-
 /* Center products in mobile view */
 @media (max-width: 768px) {
     .product-grid {
-        justify-content: center; /* Ensure items are centered in mobile */
+        display: flex; /* Ensure the grid is still a flex container */
+        justify-content: center; /* Center the items */
+        flex-direction: column; /* Stack items in a column for mobile */
+        align-items: center; /* Center the items horizontally */
     }
 
     .product {
         width: 100%; /* Full width for one item per row on mobile */
         max-width: 400px; /* Set a max width for the product */
-        margin: 0 10px; /* Margin for spacing on sides */
+        margin: 10px 0; /* Margin for spacing on top and bottom */
     }
 }
 
