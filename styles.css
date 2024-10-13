@@ -75,14 +75,13 @@ h2 {
 /* Product styling */
 .product {
     width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for products */
+    background-color: transparent; /* Set background to transparent */
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
     color: white; /* White product text */
     transition: transform 0.3s ease; /* Transition for scaling */
     box-sizing: border-box; /* Ensure padding is included in the width */
-    border: none; /* Remove borders from product images */
 }
 
 .product:hover {
