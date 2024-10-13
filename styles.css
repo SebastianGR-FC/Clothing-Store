@@ -27,12 +27,10 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s ease; /* Transition for scaling */
 }
 
 nav a:hover {
     color: #ccc; /* Lighter hover effect */
-    transform: scale(1.1); /* Zoom effect on hover */
 }
 
 /* Section styles */
@@ -49,11 +47,6 @@ h2 {
     margin-bottom: 30px;
     text-shadow: none; /* Remove text shadow for cleaner look */
     color: white; /* White section headers */
-    transition: transform 0.3s ease; /* Transition for scaling */
-}
-
-h2:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
 }
 
 /* Product grid */
@@ -76,6 +69,12 @@ h2:hover {
 
 .product:hover {
     transform: scale(1.1); /* Increased zoom on hover */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    /* No borders, no shadows */
 }
 
 /* Footer */
