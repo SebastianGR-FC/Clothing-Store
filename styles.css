@@ -90,14 +90,11 @@ h2 {
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-.product:hover {
-    transform: scale(1.1); /* Increased zoom on hover */
-}
-
-.product img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border: none; /* Remove border from images */
+/* Dark Mode Product Styles */
+@media (prefers-color-scheme: dark) {
+    .product {
+        color: #e0e0e0; /* Light grey text for product descriptions in dark mode */
+    }
 }
 
 /* Center products in mobile view */
