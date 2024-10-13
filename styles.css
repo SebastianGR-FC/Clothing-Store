@@ -54,14 +54,14 @@ h2 {
 /* Product grid */
 .product-grid {
     display: flex;
-    justify-content: center; /* Center the items */
-    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: center; /* Center items in the grid */
+    flex-wrap: wrap; /* Allow items to wrap */
     gap: 20px; /* Space between items */
 }
 
 /* Product styling */
 .product {
-    width: calc(35% - 20px); /* Two items per row */
+    flex: 1 0 35%; /* Allow items to grow and shrink, with a base width of 35% */
     background-color: black; /* Black background */
     padding: 20px;
     text-align: center;
@@ -79,6 +79,11 @@ h2 {
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Center single item in product grid */
+.product-grid > .product {
+    flex: 0 1 auto; /* Prevent flex items from stretching */
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -92,28 +97,5 @@ footer {
 @media (max-width: 768px) {
     .product {
         width: calc(100% - 40px); /* One item per row on mobile */
-    }
-}
-
-@media (min-width: 769px) {
-    .product-grid {
-        justify-content: flex-start; /* Align items to the start on larger screens */
-    }
-
-    /* Center single item */
-    .product-grid > .product {
-        flex: 0 0 auto; /* Prevent flex items from stretching */
-    }
-
-    /* Centering logic */
-    .product-grid {
-        justify-content: center; /* Center all items */
-    }
-
-    /* When there's only one item, center it */
-    .product-grid:has(.product):only-child {
-        display: flex; /* Use flexbox */
-        justify-content: center; /* Center single item */
-        width: 100%; /* Full width */
     }
 }
