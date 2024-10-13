@@ -154,4 +154,34 @@ footer {
         background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_dark.jpg'); /* Dark mode background image */
     }
 
-    header
+    header {
+        background-color: black; /* Black header background */
+        color: white; /* White header text */
+    }
+
+    nav a {
+        color: white; /* White nav links in dark mode */
+    }
+
+    nav a:hover {
+        color: #ccc; /* Lighter hover effect in dark mode */
+    }
+
+    section {
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for sections */
+    }
+
+    h2 {
+        color: white; /* White section headers in dark mode */
+    }
+
+    footer {
+        background-color: black; /* Black footer background */
+        color: white; /* White footer text */
+    }
+
+    /* Change product description color to white in dark mode */
+    .product {
+        color: white; /* White product text in dark mode */
+    }
+}
