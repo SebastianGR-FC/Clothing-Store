@@ -67,13 +67,14 @@ h2 {
 
 /* Product styling */
 .product {
-    flex: 1 0 35%; /* Allow items to grow and shrink, with a base width of 35% */
+    flex: 1 0 calc(50% - 20px); /* Allow items to grow and shrink, with a base width of 50% */
     background-color: black; /* Black background */
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
     color: white; /* White product text */
     transition: transform 0.3s ease; /* Transition for scaling */
+    box-sizing: border-box; /* Include padding and border in the width */
 }
 
 .product:hover {
@@ -85,9 +86,11 @@ h2 {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Center single item in product grid */
-.product-grid > .product {
-    flex: 0 1 auto; /* Prevent flex items from stretching */
+/* Center single item when there's an odd number of items */
+.product-grid > .product:nth-child(odd):last-child {
+    flex: 0 1 100%; /* Make the last single item full width */
+    max-width: 300px; /* Optional: Set a max width to prevent it from being too large */
+    margin: 0 auto; /* Center the last item */
 }
 
 /* Footer */
@@ -107,12 +110,4 @@ footer {
     }
 
     nav a {
-        width: 100%; /* Make buttons full-width */
-        text-align: center; /* Center text */
-        margin: 5px 0; /* Margin for spacing */
-    }
-
-    .product {
-        width: calc(100% - 40px); /* One item per row on mobile */
-    }
-}
+        width: 
