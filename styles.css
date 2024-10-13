@@ -1,7 +1,7 @@
 /* General styling */
 body {
     background-color: black; /* Fallback color */
-    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/refs/heads/main/images/background.jpg?token=GHSAT0AAAAAACY2KFNIZI5YYCWTBT2466MEZYK5PZA'); /* Unsplash image */
+    background-image: url('images/background.jpg'); /* Path to your background image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
     background-position: center; /* Center the image */
