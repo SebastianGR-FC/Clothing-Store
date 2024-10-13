@@ -86,16 +86,17 @@ h2 {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Center single item in product grid */
+/* Center last single product on odd rows */
 .product-grid:after {
     content: '';
     flex: auto;
 }
 
 .product-grid > .product:nth-child(odd):last-child {
-    width: calc(50% - 20px); /* Keep the width the same as other items */
     margin-left: auto;
     margin-right: auto;
+    width: calc(50% - 20px); /* Same width as others */
+    display: block; /* Ensure it's treated like a block element */
 }
 
 /* Footer */
@@ -126,4 +127,6 @@ footer {
 
     .product-grid > .product:nth-child(odd):last-child {
         margin-left: 0; /* No centering needed for mobile */
-        width: 100%; /*
+        width: 100%; /* Full width for single items on mobile */
+    }
+}
