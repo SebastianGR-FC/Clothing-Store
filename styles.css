@@ -58,7 +58,6 @@ h2 {
 }
 
 .product {
-    position: relative; /* Position relative for the pseudo-element */
     width: calc(35% - 20px); /* Two items per row */
     background-color: black; /* Black background */
     padding: 20px;
@@ -66,29 +65,10 @@ h2 {
     font-size: 0.8rem;
     color: white; /* White product text */
     transition: transform 0.3s ease; /* Transition for scaling */
-    overflow: hidden; /* Prevent overflow of the pseudo-element */
 }
 
 .product:hover {
     transform: scale(1.1); /* Increased zoom on hover */
-}
-
-.product::after {
-    content: ""; /* Empty content for the pseudo-element */
-    position: absolute; /* Position it absolutely */
-    top: 50%; /* Align with the center vertically */
-    left: 50%; /* Align with the center horizontally */
-    width: 300%; /* Make the width larger for the flashlight effect */
-    height: 300%; /* Make the height larger for the flashlight effect */
-    background: rgba(255, 255, 255, 0.4); /* Light effect */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition */
-    z-index: -1; /* Place behind the product */
-    transform: translate(-50%, -50%); /* Center the effect */
-}
-
-.product:hover::after {
-    opacity: 1; /* Show on hover */
 }
 
 .product img {
