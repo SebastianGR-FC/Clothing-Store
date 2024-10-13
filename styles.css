@@ -1,5 +1,6 @@
 /* General styling */
 body {
+    background-color: black; /* Set black background for the entire page */
     background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background.jpg'); /* Correct background image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
@@ -9,16 +10,18 @@ body {
     margin: 0;
     padding: 0;
     color: white; /* White text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 /* Header */
 header {
-    background-color: transparent; /* Transparent background */
+    background-color: black; /* Solid black background */
     color: white; /* White text */
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for header */
 }
 
 /* Navigation links */
@@ -33,7 +36,7 @@ nav a {
     margin: 10px; /* Add some margin for spacing */
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s ease; /* Transition for scaling */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition for scaling and color */
 }
 
 nav a:hover {
@@ -45,7 +48,7 @@ nav a:hover {
 section {
     padding: 60px 20px; /* Increased padding to avoid overlap */
     text-align: center;
-    background-color: transparent; /* Transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     font-size: 1.1rem;
     position: relative;
     z-index: 1; /* Ensure section content appears above background */
@@ -72,14 +75,14 @@ h2 {
 /* Product styling */
 .product {
     width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
-    background-color: transparent; /* Transparent background */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for products */
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
     color: white; /* White product text */
     transition: transform 0.3s ease; /* Transition for scaling */
     box-sizing: border-box; /* Ensure padding is included in the width */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Optional: Light border for visibility */
+    border: none; /* Remove borders from product images */
 }
 
 .product:hover {
@@ -89,6 +92,7 @@ h2 {
 .product img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
+    border: none; /* Remove border from images */
 }
 
 /* Center last single product on odd rows */
@@ -108,7 +112,7 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: transparent; /* Transparent background */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
     color: white; /* White text */
     font-size: 1rem;
 }
