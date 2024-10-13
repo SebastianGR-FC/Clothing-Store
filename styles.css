@@ -79,7 +79,7 @@ h2 {
 
 /* Product styling */
 .product {
-    width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
+    width: calc(25% - 20px); /* Each item takes 25% of the container width minus the gap for 4 items per row */
     background-color: transparent; /* Set background to transparent */
     padding: 20px;
     text-align: center;
@@ -108,7 +108,7 @@ h2 {
 .product-grid > .product:nth-child(odd):last-child {
     margin-left: auto;
     margin-right: auto;
-    width: calc(50% - 20px); /* Same width as others */
+    width: calc(25% - 20px); /* Same width as others */
     display: block; /* Ensure it's treated like a block element */
 }
 
@@ -122,9 +122,11 @@ h2 {
         width: calc(100% - 40px); /* One item per row on mobile */
     }
 
-    .product-grid > .product:nth-child(odd):last-child {
-        margin-left: 0; /* No centering needed for mobile */
-        width: calc(100% - 40px); /* Full width for single items on mobile */
+    /* Adjust margin for better centering of last product */
+    .product-grid > .product:last-child {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 40px); /* Ensure the last item is also full width */
     }
 }
 
