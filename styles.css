@@ -1,145 +1,128 @@
-/* General styling */
-body {
-    background-color: black; /* Set black background for the entire page */
-    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background.jpg'); /* Correct background image */
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-attachment: fixed; /* Fix the background image in place */
-    background-position: center center; /* Center the image */
-    font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
-    margin: 0;
-    padding: 0;
-    color: white; /* White text */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+:root {
+  --background-color: black;
+  --text-color: white;
+  --nav-background: black;
+  --nav-text-color: white;
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+.light-mode {
+  --background-color: #FFFFE4;
+  --text-color: black;
+  --nav-background: #f0f0f0;
+  --nav-text-color: black;
+}
+
+/* General styling */
+body {
+    background-color: var(--background-color); /* Use CSS variables */
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color); /* Use CSS variable for text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Header */
 header {
-    background-color: black; /* Solid black background */
-    color: white; /* White text */
+    background-color: var(--nav-background); /* Use CSS variable for background */
+    color: var(--nav-text-color);
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Soft shadow */
-    transition: background-color 0.3s ease; /* Smooth transition for header */
 }
 
 /* Navigation links */
 nav {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center the buttons */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav a {
-    color: white; /* White nav links */
-    margin: 10px; /* Add some margin for spacing */
+    color: var(--nav-text-color); /* Use CSS variable */
+    margin: 10px;
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for scaling and color */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ccc; /* Lighter hover effect */
-    transform: scale(1.1); /* Zoom effect on hover */
+    color: #ccc;
+    transform: scale(1.1);
 }
 
 /* Section styles */
 section {
-    padding: 60px 20px; /* Increased padding to avoid overlap */
+    padding: 60px 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.7);
     font-size: 1.1rem;
-    position: relative;
-    z-index: 1; /* Ensure section content appears above background */
 }
 
-/* Section headers */
 h2 {
-    font-size: 1.6rem; /* Slightly larger font for headers */
-    margin-bottom: 50px; /* Larger margin to avoid hover effect overlap */
-    text-shadow: none; /* Remove text shadow for cleaner look */
-    color: white; /* White section headers */
-    position: relative; /* Make sure it stays clear of surrounding content */
-    z-index: 2; /* Ensure section header stays above background images */
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+    color: var(--text-color); /* Use CSS variable */
 }
 
-/* Product grid */
 .product-grid {
     display: flex;
-    justify-content: center; /* Center items in the grid */
-    flex-wrap: wrap; /* Allow items to wrap */
-    gap: 20px; /* Space between items */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Product styling */
 .product {
-    width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
-    background-color: transparent; /* Set background to transparent */
+    width: calc(50% - 20px);
+    background-color: transparent;
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
-    color: white; /* White product text */
-    transition: transform 0.3s ease; /* Transition for scaling */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    color: var(--text-color); /* Use CSS variable */
+    transition: transform 0.3s ease;
 }
 
 .product:hover {
-    transform: scale(1.1); /* Increased zoom on hover */
+    transform: scale(1.1);
 }
 
 .product img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border: none; /* Remove border from images */
+    height: auto;
 }
 
 /* Center products in mobile view */
 @media (max-width: 768px) {
     .product-grid {
-        display: flex; /* Ensure the grid is still a flex container */
-        justify-content: center; /* Center the items */
-        flex-direction: column; /* Stack items in a column for mobile */
-        align-items: center; /* Center the items horizontally */
+        flex-direction: column;
+        align-items: center;
     }
 
     .product {
-        width: 100%; /* Full width for one item per row on mobile */
-        max-width: 400px; /* Set a max width for the product */
-        margin: 10px 0; /* Margin for spacing on top and bottom */
-    }
-    
-    /* Centering for odd-numbered products */
-    .product-grid::after {
-        content: '';
-        flex: auto; /* This allows any extra space to be distributed evenly */
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
     }
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-    color: white; /* White text */
-    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--text-color); /* Use CSS variable */
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        align-items: center; /* Center align items */
-    }
-
-    nav a {
-        width: 100%; /* Make buttons full-width */
-        text-align: center; /* Center text */
-        margin: 5px 0; /* Margin for spacing */
-    }
-}
+/* Dark/Light mode toggle button */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right
