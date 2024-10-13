@@ -115,16 +115,13 @@ h2 {
 /* Center products in mobile view */
 @media (max-width: 768px) {
     .product-grid {
-        justify-content: flex-start; /* Align items to the left on mobile */
+        justify-content: center; /* Ensure items are centered in mobile */
     }
 
     .product {
-        width: calc(100% - 40px); /* One item per row on mobile */
-    }
-
-    .product-grid > .product:nth-child(odd):last-child {
-        margin-left: 0; /* No centering needed for mobile */
-        width: calc(100% - 40px); /* Full width for single items on mobile */
+        width: 100%; /* Full width for one item per row on mobile */
+        max-width: 400px; /* Set a max width for the product */
+        margin: 0 10px; /* Margin for spacing on sides */
     }
 }
 
