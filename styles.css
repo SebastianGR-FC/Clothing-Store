@@ -1,10 +1,11 @@
 /* General styling */
 body {
     background-color: black; /* Fallback color */
-    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/32b2d0433e5778ddea08daff039de59fbae4ab89/images/background.jpg'); /* Path to your background image */
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/32b2d0433e5778ddea08daff039de59fbae4ab89/images/background.jpg'); /* Correct background image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
-    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix the background image in place */
+    background-position: center center; /* Center the image */
     font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
@@ -43,18 +44,22 @@ nav a:hover {
 
 /* Section styles */
 section {
-    padding: 40px 20px;
+    padding: 60px 20px; /* Increased padding to avoid overlap */
     text-align: center;
     background-color: black; /* Black background */
     font-size: 0.9rem;
+    position: relative;
+    z-index: 1; /* Ensure section content appears above background */
 }
 
 /* Section headers */
 h2 {
-    font-size: 1.4rem;
-    margin-bottom: 30px;
+    font-size: 1.6rem; /* Slightly larger font for headers */
+    margin-bottom: 50px; /* Larger margin to avoid hover effect overlap */
     text-shadow: none; /* Remove text shadow for cleaner look */
     color: white; /* White section headers */
+    position: relative; /* Make sure it stays clear of surrounding content */
+    z-index: 2; /* Ensure section header stays above background images */
 }
 
 /* Product grid */
