@@ -1,49 +1,44 @@
-/* General styling for Dark Mode (default) */
+/* General styling for both modes */
 body {
-    background-color: black; /* Dark background for the entire page */
-    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_dark.jpg'); /* Correct background image for dark mode */
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-attachment: fixed; /* Fix the background image in place */
-    background-position: center center; /* Center the image */
-    font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
-    color: white; /* White text in dark mode */
-    transition: background-color 0.3s ease, background-image 0.3s ease; /* Smooth transition for background color and image */
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: white; /* Light background */
-        background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg'); /* Custom light mode image */
-        color: black; /* Black text for light mode */
-    }
+/* Dark mode (default) */
+body.dark-mode {
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_dark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    color: white;
+}
+
+/* Light mode */
+body.light-mode {
+    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg');
+    background-color: white; /* In case the image doesn't load, default to white */
+    color: black; /* Text color for light mode */
 }
 
 /* Smooth Scrolling */
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 /* Header */
 header {
-    background-color: black; /* Solid black background for dark mode */
+    background-color: black; /* Solid black background */
     color: white; /* White text */
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Soft shadow */
     transition: background-color 0.3s ease; /* Smooth transition for header */
-}
-
-/* Light Mode - Header */
-@media (prefers-color-scheme: light) {
-    header {
-        background-color: white; /* Light background for header */
-        color: black; /* Black text for header in light mode */
-    }
 }
 
 /* Navigation links */
@@ -54,7 +49,7 @@ nav {
 }
 
 nav a {
-    color: white; /* White nav links in dark mode */
+    color: white; /* White nav links */
     margin: 10px; /* Add some margin for spacing */
     text-decoration: none;
     font-weight: bold;
@@ -66,33 +61,14 @@ nav a:hover {
     transform: scale(1.1); /* Zoom effect on hover */
 }
 
-/* Light Mode - Navigation links */
-@media (prefers-color-scheme: light) {
-    nav a {
-        color: black; /* Black navigation links in light mode */
-    }
-
-    nav a:hover {
-        color: #666; /* Darker hover effect in light mode */
-    }
-}
-
 /* Section styles */
 section {
     padding: 60px 20px; /* Increased padding to avoid overlap */
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black for dark mode */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     font-size: 1.1rem;
     position: relative;
     z-index: 1; /* Ensure section content appears above background */
-}
-
-/* Light Mode - Section styles */
-@media (prefers-color-scheme: light) {
-    section {
-        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for light mode */
-        color: black; /* Black text in sections */
-    }
 }
 
 /* Section headers */
@@ -100,16 +76,9 @@ h2 {
     font-size: 1.6rem; /* Slightly larger font for headers */
     margin-bottom: 50px; /* Larger margin to avoid hover effect overlap */
     text-shadow: none; /* Remove text shadow for cleaner look */
-    color: white; /* White section headers in dark mode */
+    color: white; /* White section headers */
     position: relative; /* Make sure it stays clear of surrounding content */
     z-index: 2; /* Ensure section header stays above background images */
-}
-
-/* Light Mode - Section headers */
-@media (prefers-color-scheme: light) {
-    h2 {
-        color: black; /* Black section headers in light mode */
-    }
 }
 
 /* Product grid */
@@ -127,7 +96,7 @@ h2 {
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
-    color: white; /* White product text in dark mode */
+    color: white; /* White product text */
     transition: transform 0.3s ease; /* Transition for scaling */
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
@@ -142,62 +111,6 @@ h2 {
     border: none; /* Remove border from images */
 }
 
-/* Light Mode - Product text */
-@media (prefers-color-scheme: light) {
-    .product {
-        color: black; /* Black product text in light mode */
-    }
-}
-
 /* Center products in mobile view */
 @media (max-width: 768px) {
-    .product-grid {
-        display: flex; /* Ensure the grid is still a flex container */
-        justify-content: center; /* Center the items */
-        flex-direction: column; /* Stack items in a column for mobile */
-        align-items: center; /* Center the items horizontally */
-    }
-
-    .product {
-        width: 100%; /* Full width for one item per row on mobile */
-        max-width: 400px; /* Set a max width for the product */
-        margin: 10px 0; /* Margin for spacing on top and bottom */
-    }
-    
-    /* Centering for odd-numbered products */
-    .product-grid::after {
-        content: '';
-        flex: auto; /* This allows any extra space to be distributed evenly */
-    }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for dark mode */
-    color: white; /* White text in dark mode */
-    font-size: 1rem;
-}
-
-/* Light Mode - Footer */
-@media (prefers-color-scheme: light) {
-    footer {
-        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for light mode */
-        color: black; /* Black text in footer */
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        align-items: center; /* Center align items */
-    }
-
-    nav a {
-        width: 100%; /* Make buttons full-width */
-        text-align: center; /* Center text */
-        margin: 5px 0; /* Margin for spacing */
-    }
-}
+    .
