@@ -22,20 +22,16 @@ header {
 }
 
 /* Navigation links */
-nav {
-    margin-top: 10px; /* Add some spacing between the title and nav links */
-}
-
-.nav-link {
-    color: white; /* White text */
-    margin: 0 15px; /* Margin around links */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
+nav a {
+    color: white; /* White nav links */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
     transition: transform 0.3s ease; /* Transition for scaling */
 }
 
-/* Hover effect for links */
-.nav-link:hover {
+nav a:hover {
+    color: #ccc; /* Lighter hover effect */
     transform: scale(1.1); /* Zoom effect on hover */
 }
 
@@ -58,13 +54,14 @@ h2 {
 /* Product grid */
 .product-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    gap: 20px; /* Space between items */
 }
 
+/* Product styling */
 .product {
-    width: calc(35% - 20px); /* Two items per row */
+    width: calc(35% - 20px); /* Default width for two items per row */
     background-color: black; /* Black background */
     padding: 20px;
     text-align: center;
@@ -80,7 +77,6 @@ h2 {
 .product img {
     width: 100%;
     height: auto;
-    /* No borders, no shadows */
 }
 
 /* Footer */
