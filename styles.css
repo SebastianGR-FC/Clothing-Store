@@ -76,19 +76,20 @@ h2 {
 .product::after {
     content: ""; /* Empty content for the pseudo-element */
     position: absolute; /* Position it absolutely */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    width: 200%; /* Expand to cover the product area */
-    height: 200%; /* Expand to cover the product area */
-    background: rgba(255, 255, 255, 0.6); /* Light effect */
-    border-radius: 50%; /* Make it circular */
-    transform: translate(-50%, -50%) scale(0); /* Initially hidden */
-    transition: transform 0.3s ease; /* Smooth transition */
+    top: 0; /* Align with the top */
+    left: 0; /* Align with the left */
+    width: 100%; /* Cover the product area */
+    height: 100%; /* Cover the product area */
+    background: rgba(255, 255, 255, 0.2); /* Light effect */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect */
+    border-radius: 10px; /* Optional: Rounded corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
     z-index: -1; /* Place behind the product */
 }
 
 .product:hover::after {
-    transform: translate(-50%, -50%) scale(1); /* Show on hover */
+    opacity: 1; /* Show on hover */
 }
 
 .product img {
