@@ -112,6 +112,22 @@ h2 {
     display: block; /* Ensure it's treated like a block element */
 }
 
+/* Center products in mobile view */
+@media (max-width: 768px) {
+    .product-grid {
+        justify-content: center; /* Ensure items are centered in mobile */
+    }
+
+    .product {
+        width: calc(100% - 40px); /* One item per row on mobile */
+    }
+
+    .product-grid > .product:nth-child(odd):last-child {
+        margin-left: 0; /* No centering needed for mobile */
+        width: calc(100% - 40px); /* Full width for single items on mobile */
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -132,14 +148,5 @@ footer {
         width: 100%; /* Make buttons full-width */
         text-align: center; /* Center text */
         margin: 5px 0; /* Margin for spacing */
-    }
-
-    .product {
-        width: calc(100% - 40px); /* One item per row on mobile */
-    }
-
-    .product-grid > .product:nth-child(odd):last-child {
-        margin-left: 0; /* No centering needed for mobile */
-        width: 100%; /* Full width for single items on mobile */
     }
 }
