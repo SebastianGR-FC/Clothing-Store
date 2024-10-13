@@ -13,6 +13,11 @@ body {
     transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
 /* Header */
 header {
     background-color: black; /* Solid black background */
