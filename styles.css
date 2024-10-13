@@ -86,10 +86,13 @@ h2 {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Make last product in an odd-numbered row centered and the same size */
+/* Center single item in product grid */
 .product-grid > .product:nth-child(odd):last-child {
+    width: 50%; /* Keep the width the same as other items */
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center; /* Center the item */
 }
 
 /* Footer */
@@ -120,5 +123,6 @@ footer {
 
     .product-grid > .product:nth-child(odd):last-child {
         margin-left: 0; /* No centering needed for mobile */
+        width: 100%; /* Full width for single items on mobile */
     }
 }
