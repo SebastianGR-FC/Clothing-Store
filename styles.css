@@ -13,7 +13,7 @@ body {
 
 /* Header */
 header {
-    background-color: black; /* Black background */
+    background-color: transparent; /* Transparent background */
     color: white; /* White text */
     padding: 20px;
     text-align: center;
@@ -45,7 +45,7 @@ nav a:hover {
 section {
     padding: 60px 20px; /* Increased padding to avoid overlap */
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: transparent; /* Transparent background */
     font-size: 1.1rem;
     position: relative;
     z-index: 1; /* Ensure section content appears above background */
@@ -72,13 +72,14 @@ h2 {
 /* Product styling */
 .product {
     width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
-    background-color: black; /* Black background */
+    background-color: transparent; /* Transparent background */
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
     color: white; /* White product text */
     transition: transform 0.3s ease; /* Transition for scaling */
     box-sizing: border-box; /* Ensure padding is included in the width */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Optional: Light border for visibility */
 }
 
 .product:hover {
@@ -107,7 +108,7 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: black; /* Black background */
+    background-color: transparent; /* Transparent background */
     color: white; /* White text */
     font-size: 1rem;
 }
