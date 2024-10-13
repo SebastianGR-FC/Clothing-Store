@@ -9,20 +9,21 @@ body {
 }
 
 /* Dark mode (default) */
-body.dark-mode {
+body {
     background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_dark.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    color: white;
 }
 
 /* Light mode */
-body.light-mode {
-    background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg');
-    background-color: white; /* In case the image doesn't load, default to white */
-    color: black; /* Text color for light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background/background_light.jpg');
+        background-color: white; /* In case the image doesn't load, default to white */
+        color: black; /* Text color for light mode */
+    }
 }
 
 /* Smooth Scrolling */
@@ -113,4 +114,45 @@ h2 {
 
 /* Center products in mobile view */
 @media (max-width: 768px) {
-    .
+    .product-grid {
+        display: flex; /* Ensure the grid is still a flex container */
+        justify-content: center; /* Center the items */
+        flex-direction: column; /* Stack items in a column for mobile */
+        align-items: center; /* Center the items horizontally */
+    }
+
+    .product {
+        width: 100%; /* Full width for one item per row on mobile */
+        max-width: 400px; /* Set a max width for the product */
+        margin: 10px 0; /* Margin for spacing on top and bottom */
+    }
+    
+    /* Centering for odd-numbered products */
+    .product-grid::after {
+        content: '';
+        flex: auto; /* This allows any extra space to be distributed evenly */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: white; /* White text */
+    font-size: 1rem;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center; /* Center align items */
+    }
+
+    nav a {
+        width: 100%; /* Make buttons full-width */
+        text-align: center; /* Center text */
+        margin: 5px 0; /* Margin for spacing */
+    }
+}
