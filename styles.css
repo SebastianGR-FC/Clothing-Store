@@ -1,3 +1,4 @@
+/* General styling */
 body {
     background-image: url('https://raw.githubusercontent.com/SebastianGR-FC/Clothing-Store/main/images/background.jpg'); /* Correct background image */
     background-size: cover; /* Cover the entire viewport */
@@ -44,7 +45,7 @@ nav a:hover {
 section {
     padding: 60px 20px; /* Increased padding to avoid overlap */
     text-align: center;
-    background-color: black; /* Black background */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     font-size: 1.1rem;
     position: relative;
     z-index: 1; /* Ensure section content appears above background */
