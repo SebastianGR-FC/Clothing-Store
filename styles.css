@@ -5,6 +5,7 @@ body {
     font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
+    padding-top: 120px; /* Added padding to move the whole page down */
     background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_light.jpg'); /* Light mode background image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
@@ -79,7 +80,7 @@ section {
 
 /* Playeras Section styling */
 .section-playeras {
-    margin-top: 120px; /* Move down to avoid overlap with the header */
+    margin-top: 0; /* No additional margin needed since we're moving the body down */
 }
 
 /* Section headers */
