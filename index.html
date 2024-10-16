@@ -168,7 +168,7 @@
 
       if (currentScroll > lastScrollTop) {
           // Scrolling down
-          header.style.top = "-100px"; // Adjust this value based on header height
+          header.style.top = `-${header.offsetHeight}px`; // Hide header completely
       } else {
           // Scrolling up
           header.style.top = "0";
