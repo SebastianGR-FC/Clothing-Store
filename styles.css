@@ -25,7 +25,7 @@ header {
     color: black; /* Black text */
     padding: 20px; /* Standard padding */
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Increased font size for header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
     position: fixed;
     top: 0; /* Keep header at the top */
@@ -36,9 +36,21 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increased font size of the header title */
 }
 
+.countdown {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Increased font size for countdown */
+    color: black;
+    line-height: 1.5; /* Adjust line height for better spacing */
+}
+
+.countdown span {
+    display: block; /* Ensure each element takes a full row */
+}
+
+/* Navigation styling */
 nav {
     margin-top: 10px;
 }
@@ -60,12 +72,6 @@ nav a:hover {
     color: purple; /* Set "Contacto" to purple */
 }
 
-.countdown {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: black;
-}
-
 /* Section styling */
 section {
     padding: 100px 20px; /* Padding for sections */
@@ -78,11 +84,6 @@ section {
     margin-bottom: 0; /* Remove margin to avoid weird gaps between sections */
 }
 
-/* Playeras Section styling */
-.section-playeras {
-    margin-top: 0; /* No additional margin needed since we're moving the body down */
-}
-
 /* Section headers */
 h2 {
     font-size: 1.6rem;
@@ -90,15 +91,6 @@ h2 {
     color: black; /* Black section headers */
     position: relative;
     z-index: 2; /* Ensure section header stays above background images */
-}
-
-/* Hover effect for specific sections */
-section.playeras:hover,
-section.pantalones:hover,
-section.contacto:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
-    transform: scale(1.02); /* Slight scaling on hover */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
 /* Product grid styling */
@@ -132,6 +124,18 @@ section.contacto:hover {
 
 /* Mobile styling */
 @media (max-width: 768px) {
+    header {
+        font-size: 1.3rem; /* Adjust font size for mobile */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Adjust font size for header title on mobile */
+    }
+
+    .countdown {
+        font-size: 1.1rem; /* Adjust countdown font size for mobile */
+    }
+
     .product-grid {
         display: flex;
         justify-content: center;
@@ -153,14 +157,6 @@ footer {
     color: black;
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Contactanos Section */
-.contactanos {
-    background-color: white; /* Solid white background for contact section in light mode */
-    color: black; /* Text color for contact section */
-    padding: 20px;
-    text-align: center;
 }
 
 /* Dark Mode Styles */
@@ -200,13 +196,6 @@ footer {
     footer {
         background-color: black; /* Solid dark background in dark mode */
         color: white;
-    }
-
-    .contactanos {
-        background-color: black; /* Solid dark background for contact section in dark mode */
-        color: white; /* Text color for contact section in dark mode */
-        padding: 20px;
-        text-align: center;
     }
 
     .product {
