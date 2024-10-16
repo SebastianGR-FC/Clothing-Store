@@ -27,6 +27,7 @@ header {
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition for header */
+    position: relative;
 }
 
 /* Navigation links */
@@ -45,156 +46,76 @@ nav a {
 }
 
 nav a:hover {
-    color: #333; /* Darker hover effect */
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    color: #ff5733; /* Change to bright orange on hover */
 }
 
-/* Section styles */
-section {
-    padding: 60px 20px; /* Increased padding to avoid overlap */
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for sections */
-    font-size: 1.1rem;
-    position: relative;
-    z-index: 1; /* Ensure section content appears above background */
-    transition: background-color 0.3s ease; /* Transition for section background */
-}
-
-/* Section headers */
+/* Section headings */
 h2 {
-    font-size: 1.6rem; /* Slightly larger font for headers */
-    margin-bottom: 50px; /* Larger margin to avoid hover effect overlap */
-    text-shadow: none; /* Remove text shadow for cleaner look */
-    color: black; /* Black section headers */
-    position: relative; /* Make sure it stays clear of surrounding content */
-    z-index: 2; /* Ensure section header stays above background images */
-}
-
-/* Product grid */
-.product-grid {
-    display: flex;
-    justify-content: center; /* Center items in the grid */
-    flex-wrap: wrap; /* Allow items to wrap */
-    gap: 20px; /* Space between items */
-}
-
-/* Product styling */
-.product {
-    width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
-    background-color: transparent; /* Keep product background transparent */
-    padding: 20px;
     text-align: center;
-    font-size: 1rem; /* Increased font size for product descriptions */
-    color: black; /* Black product text */
-    transition: transform 0.3s ease; /* Transition for scaling */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    margin: 50px 0 20px;
+    font-size: 1.5rem;
 }
 
-.product:hover {
-    transform: scale(1.1); /* Increased zoom on hover */
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between items */
+    margin: 0 10px;
+    justify-items: center;
 }
 
-/* Smooth active effect for mobile */
-.product:active {
-    transform: scale(1.05); /* Slightly scale down to create a touch effect */
-    transition: transform 0.2s ease; /* Transition for the active state */
+/* Product Card */
+.product {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
 }
 
 .product img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border: none; /* Remove border from images */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
-/* Center products in mobile view */
-@media (max-width: 768px) {
-    .product-grid {
-        display: flex; /* Ensure the grid is still a flex container */
-        justify-content: center; /* Center the items */
-        flex-direction: column; /* Stack items in a column for mobile */
-        align-items: center; /* Center the items horizontally */
-    }
+.product p {
+    margin: 5px 0;
+}
 
-    .product {
-        width: 100%; /* Full width for one item per row on mobile */
-        max-width: 400px; /* Set a max width for the product */
-        margin: 10px 0; /* Margin for spacing on top and bottom */
-    }
+/* Contact Section */
+#contact {
+    text-align: center;
+    margin-top: 30px;
+}
 
-    /* Centering for odd-numbered products */
-    .product-grid::after {
-        content: '';
-        flex: auto; /* This allows any extra space to be distributed evenly */
-    }
-
-    .product {
-        transition: transform 0.3s ease; /* Ensure transition is applied on mobile */
-    }
-
-    .product:hover {
-        transform: scale(1.1); /* Keep hover effect on mobile */
-    }
+#contact a {
+    color: black; /* Black for contrast */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    color: black; /* Black text */
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for footer */
+    margin-top: 50px;
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        align-items: center; /* Center align items */
-    }
-
-    nav a {
-        width: 100%; /* Make buttons full-width */
-        text-align: center; /* Center text */
-        margin: 5px 0; /* Margin for spacing */
-    }
+/* Countdown Timer Styles */
+#countdown-timer {
+    font-family: 'Press Start 2P', cursive; /* Matching font */
+    color: #ff5733; /* Bright orange for the retro vibe */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cool shadow effect */
+    z-index: 10;
 }
 
-/* Dark Mode Styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: black; /* Set black background for dark mode */
-        color: white; /* White text for dark mode */
-        background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_dark.jpg'); /* Dark mode background image */
-    }
-
-    header {
-        background-color: black; /* Black header background */
-        color: white; /* White header text */
-    }
-
-    nav a {
-        color: white; /* White nav links in dark mode */
-    }
-
-    nav a:hover {
-        color: #ccc; /* Lighter hover effect in dark mode */
-    }
-
-    section {
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for sections */
-    }
-
-    h2 {
-        color: white; /* White section headers in dark mode */
-    }
-
-    footer {
-        background-color: black; /* Black footer background */
-        color: white; /* White footer text */
-    }
-
-    .product {
-        color: white; /* White product text in dark mode */
-    }
+#countdown-timer span {
+    color: #00ff00; /* Bright green text */
 }
