@@ -39,6 +39,7 @@ header h1 {
     font-size: 2rem; /* Increased font size of the header title */
 }
 
+/* Countdown styling */
 .countdown {
     margin-top: 10px;
     font-size: 1.2rem; /* Increased font size for countdown */
@@ -47,7 +48,7 @@ header h1 {
 }
 
 .countdown span {
-    display: block; /* Ensure each element takes a full row */
+    display: inline; /* Keep countdown elements on one line for desktop */
 }
 
 /* Navigation styling */
@@ -126,6 +127,7 @@ h2 {
 @media (max-width: 768px) {
     header {
         font-size: 1.3rem; /* Adjust font size for mobile */
+        text-align: center; /* Center the header on mobile */
     }
 
     header h1 {
@@ -134,6 +136,12 @@ h2 {
 
     .countdown {
         font-size: 1.1rem; /* Adjust countdown font size for mobile */
+        display: block; /* Separate lines for mobile */
+    }
+
+    .countdown span {
+        display: block; /* Make each part of the countdown stack vertically */
+        text-align: center; /* Center text */
     }
 
     .product-grid {
