@@ -125,6 +125,10 @@ h2 {
 
 /* Mobile styling */
 @media (max-width: 768px) {
+    body {
+        padding-top: 90px; /* Move the page down so the header doesn't overlap with section text */
+    }
+
     header {
         font-size: 1.8rem; /* Increased font size for mobile */
         text-align: center; /* Center the header on mobile */
@@ -137,7 +141,7 @@ h2 {
     }
 
     .countdown {
-        font-size: 1.5rem; /* Adjusted countdown font size */
+        font-size: 1.1rem; /* Decreased font size for countdown */
         display: block; /* Separate lines for mobile */
         text-align: center; /* Center the countdown text */
     }
@@ -145,6 +149,10 @@ h2 {
     .countdown span {
         display: block; /* Make countdown items stack vertically */
         text-align: center;
+    }
+
+    nav a {
+        font-size: 1.5rem; /* Increased font size for navigation links */
     }
 
     .product-grid {
@@ -158,11 +166,6 @@ h2 {
         width: 100%;
         max-width: 400px;
         margin: 10px 0;
-    }
-
-    /* Hide "nuevos artículos en:" text on mobile */
-    .nuevos-articulos-text {
-        display: none;
     }
 }
 
