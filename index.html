@@ -1,212 +1,180 @@
-/* General styling */
-body {
-    background-color: white; /* Set white background for light mode */
-    color: black; /* Black text for light mode */
-    font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
-    margin: 0;
-    padding: 0;
-    padding-top: 70px; /* Added padding to move the whole page down */
-    background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_light.jpg'); /* Light mode background image */
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-attachment: fixed; /* Fix the background image in place */
-    background-position: center center; /* Center the image */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background and text color */
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Ropa</title>
+  <link rel="stylesheet" href="styles.css">
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-/* Header styling */
-header {
-    background-color: white; /* Solid white background */
-    color: black; /* Black text */
-    padding: 20px; /* Standard padding */
-    text-align: center;
-    font-size: 1.5rem; /* Increased font size for header */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    position: fixed;
-    top: 0; /* Keep header at the top */
-    width: 100%;
-    z-index: 1000;
-    transition: top 0.3s ease; /* Smooth transition for header position */
-}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-35ZDRH0CL3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-35ZDRH0CL3');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Catálogo</h1>
+    <div id="countdown-timer" class="countdown">Nuevos artículos en: <span id="timer"></span></div> <!-- Countdown Timer -->
+    <nav>
+        <a class="nav-link" href="#playeras">Playeras</a>
+        <a class="nav-link" href="#pantalones">Pantalones</a>
+        <a class="nav-link nav-purple" href="#contact">Contacto</a>
+    </nav>
+  </header>
 
-header h1 {
-    margin: 0;
-    font-size: 2rem; /* Increased font size of the header title */
-}
+  <section id="playeras">
+    <h2>Playeras</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/shirt1.png" alt="Camisa 1">
+        <p><strong>Camisa 1</strong></p>
+        <p>$29.99</p>
+        <p>Talla: S</p>
+      </div>
+      <div class="product">
+        <img src="images/shirt2.png" alt="Camisa 2">
+        <p><strong>Camisa 2</strong></p>
+        <p>$100</p>
+        <p>Talla: S</p>
+      </div>
+      <div class="product">
+        <img src="images/shirt3.png" alt="Camisa 3">
+        <p><strong>Camisa 3</strong></p>
+        <p>$34.99</p>
+        <p>Talla: M</p>
+      </div>
+    </div>
+  </section>
 
-/* Countdown styling */
-.countdown {
-    margin-top: 10px;
-    font-size: 1.2rem; /* Increased font size for countdown */
-    color: black;
-    line-height: 1.5; /* Adjust line height for better spacing */
-}
+  <section id="pantalones">
+    <h2>Pantalones</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/pants1.png" alt="Pantalones 1">
+        <p><strong>Pantalones 1</strong></p>
+        <p>$49.99</p>
+        <p>Talla: L</p>
+      </div>
+      <div class="product">
+        <img src="images/pants2.png" alt="Pantalones 2">
+        <p><strong>Pantalones 2</strong></p>
+        <p>$53.99</p>
+        <p>Talla: S</p>
+      </div>
+      <div class="product">
+        <img src="images/pants3.png" alt="Pantalones 3">
+        <p><strong>Pantalones 3</strong></p>
+        <p>$10.99</p>
+        <p>Talla: M</p>
+      </div>
+      <div class="product">
+        <img src="images/pants4.png" alt="Pantalones 4">
+        <p><strong>Pantalones 4</strong></p>
+        <p>$20.99</p>
+        <p>Talla: S</p>
+      </div>
+    </div>
+  </section>
 
-.countdown span {
-    display: inline; /* Keep countdown elements on one line for desktop */
-}
+  <section id="contact">
+    <h2>Contáctanos</h2>
+    <p>Teléfono: <a href="https://api.whatsapp.com/send?phone=4422742817">WhatsApp</a></p>
+    <p>(Se hacen entregas personales en Ciudad Universitaria) </p>
+  </section>
 
-/* Navigation styling */
-nav {
-    margin-top: 10px;
-}
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
 
-nav a {
-    text-decoration: none;
-    color: black;
-    margin: 0 20px; /* Increased space between header items */
-    font-size: 1.1rem;
-    transition: transform 0.3s ease, color 0.3s ease; /* Zoom effect on hover */
-}
+  <script>
+    // Smooth scrolling function
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+            const targetId = this.getAttribute('href'); // Get the target section id
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth' // Smooth scroll behavior
+            });
+        });
+    });
 
-nav a:hover {
-    transform: scale(1.1); /* Zoom effect */
-    color: purple; /* Hover effect color */
-}
+    // Scroll to the top on page load
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0); // Scroll to top
+        }, 0); // Small delay to ensure scroll to top works
+    };
 
-.nav-purple {
-    color: purple; /* Set "Contacto" to purple */
-}
+    // Function to calculate the time remaining until next Friday at 6 PM
+    function getNextDropTime() {
+        const now = new Date();
+        const dayOfWeek = now.getUTCDay();
+        const hours = now.getUTCHours();
+        
+        // Mexico City is UTC-6
+        const timeOffsetMexicoCity = 6 * 60 * 60 * 1000; // UTC -6 in milliseconds
+        const mexicoCityTime = new Date(now.getTime() - timeOffsetMexicoCity);
 
-/* Section styling */
-section {
-    padding: 100px 20px; /* Padding for sections */
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for sections */
-    font-size: 1.1rem;
-    position: relative;
-    z-index: 1;
-    transition: background-color 0.3s ease; /* Transition for section background */
-    margin-bottom: 0; /* Remove margin to avoid weird gaps between sections */
-}
+        // Get the next Friday at 6 PM (Mexico City time)
+        let nextFriday = new Date(mexicoCityTime);
+        nextFriday.setDate(mexicoCityTime.getDate() + (5 - dayOfWeek + 7) % 7); // Set to next Friday
+        nextFriday.setHours(18, 0, 0, 0); // Set to 6 PM
 
-/* Section headers */
-h2 {
-    font-size: 1.6rem;
-    margin-bottom: 60px; /* Increased margin to move titles down */
-    color: black; /* Black section headers */
-    position: relative;
-    z-index: 2; /* Ensure section header stays above background images */
-}
+        // If it's past 6 PM on Friday, move to the next week
+        if (mexicoCityTime > nextFriday) {
+            nextFriday.setDate(nextFriday.getDate() + 7);
+        }
 
-/* Product grid styling */
-.product-grid {
-    display: flex;
-    justify-content: center; /* Center items in the grid */
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product {
-    width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
-    background-color: transparent;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: black;
-    transition: transform 0.3s ease;
-    box-sizing: border-box;
-}
-
-.product:hover {
-    transform: scale(1.1);
-}
-
-.product img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border: none; /* Remove border from images */
-}
-
-/* Mobile styling */
-@media (max-width: 768px) {
-    header {
-        font-size: 1.3rem; /* Adjust font size for mobile */
-        text-align: center; /* Center the header on mobile */
+        // Return the difference in milliseconds between now and next Friday at 6 PM
+        return nextFriday.getTime() - mexicoCityTime.getTime();
     }
 
-    header h1 {
-        font-size: 1.8rem; /* Adjust font size for header title on mobile */
+    // Function to update the countdown timer
+    function updateCountdown() {
+        const timeLeft = getNextDropTime();
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Format the time string
+        const timeString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        // Update the timer element
+        document.getElementById('timer').textContent = timeString;
+
+        // Call the function every second to update the timer in real-time
+        setTimeout(updateCountdown, 1000);
     }
 
-    .countdown {
-        font-size: 1.1rem; /* Adjust countdown font size for mobile */
-        display: block; /* Separate lines for mobile */
-    }
+    // Call the function to start the countdown on page load
+    updateCountdown();
+  </script>
+  
+  <script>
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
 
-    .countdown span {
-        display: block; /* Make each part of the countdown stack vertically */
-        text-align: center; /* Center text */
-    }
+  window.addEventListener('scroll', function() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    .product-grid {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product {
-        width: 100%;
-        max-width: 400px;
-        margin: 10px 0;
-    }
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: white; /* Solid white background in light mode */
-    color: black;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Dark Mode Styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: black;
-        color: white;
-        background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_dark.jpg'); /* Dark mode background image */
-    }
-
-    header {
-        background-color: black;
-        color: white;
-        top: 0; /* Keep header at the top in dark mode */
-    }
-
-    nav a {
-        color: white;
-    }
-
-    nav a:hover {
-        color: #ccc; /* Light color on hover */
-    }
-
-    .countdown {
-        color: white; /* Change timer color to white in dark mode */
-    }
-
-    section {
-        background-color: rgba(0, 0, 0, 0.7); /* Dark mode section background */
-    }
-
-    h2 {
-        color: white;
-    }
-
-    footer {
-        background-color: black; /* Solid dark background in dark mode */
-        color: white;
-    }
-
-    .product {
-        color: white;
-    }
-}
+      if (currentScroll > lastScrollTop) {
+          // Scrolling down
+          header.style.top = `-${header.offsetHeight}px`; // Hide header completely
+      } else {
+          // Scrolling up
+          header.style.top = "0";
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  });
+</script>
+</body>
+</html>
