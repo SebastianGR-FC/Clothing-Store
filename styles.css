@@ -13,12 +13,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background and text color */
 }
 
-/* Smooth Scrolling */
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
-/* Header */
+/* Header styling */
 header {
     background-color: white; /* Solid white background */
     color: black; /* Black text */
@@ -26,96 +26,152 @@ header {
     text-align: center;
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition for header */
-    position: relative;
 }
 
-/* Navigation links */
-nav {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center the buttons */
-}
-
-nav a {
-    color: black; /* Black nav links */
-    margin: 10px; /* Add some margin for spacing */
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for scaling and color */
-}
-
-nav a:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    color: #ff5733; /* Change to bright orange on hover */
-}
-
-/* Section headings */
-h2 {
-    text-align: center;
-    margin: 50px 0 20px;
+header h1 {
+    margin: 0;
     font-size: 1.5rem;
 }
 
-/* Product Grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
-    gap: 20px; /* Space between items */
-    margin: 0 10px;
-    justify-items: center;
+nav {
+    margin-top: 10px;
 }
 
-/* Product Card */
-.product {
-    background-color: white;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-purple {
+    color: purple; /* Set "Contacto" to purple */
+}
+
+.countdown {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Section styling */
+section {
+    padding: 100px 20px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for sections */
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease; /* Transition for section background */
+}
+
+/* Section headers */
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+    color: black; /* Black section headers */
+    position: relative;
+    z-index: 2; /* Ensure section header stays above background images */
+}
+
+/* Product grid styling */
+.product-grid {
+    display: flex;
+    justify-content: center; /* Center items in the grid */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    width: calc(50% - 20px); /* Each item takes 50% of the container width minus the gap */
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.product:hover {
+    transform: scale(1.1);
 }
 
 .product img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Remove border from images */
 }
 
-.product p {
-    margin: 5px 0;
+/* Mobile styling */
+@media (max-width: 768px) {
+    .product-grid {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
 }
 
-/* Contact Section */
-#contact {
-    text-align: center;
-    margin-top: 30px;
-}
-
-#contact a {
-    color: black; /* Black for contrast */
-}
-
-/* Footer */
 footer {
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    color: black;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Countdown Timer Styles */
-#countdown-timer {
-    font-family: 'Press Start 2P', cursive; /* Matching font */
-    color: #ff5733; /* Bright orange for the retro vibe */
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 0.9rem;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-    padding: 10px;
-    border-radius: 8px; /* Rounded corners */
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cool shadow effect */
-    z-index: 10;
-}
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+        background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_dark.jpg'); /* Dark mode background image */
+    }
 
-#countdown-timer span {
-    color: #00ff00; /* Bright green text */
+    header {
+        background-color: black;
+        color: white;
+    }
+
+    nav a {
+        color: white;
+    }
+
+    nav a:hover {
+        color: #ccc;
+    }
+
+    section {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+        color: white;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+    }
+
+    .product {
+        color: white;
+    }
 }
