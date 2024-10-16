@@ -74,12 +74,12 @@ section {
     position: relative;
     z-index: 1;
     transition: background-color 0.3s ease; /* Transition for section background */
-    margin-bottom: 20px; /* Space between sections */
+    margin-bottom: 0; /* Remove margin to avoid weird gaps between sections */
 }
 
 /* Playeras Section styling */
 .section-playeras {
-    margin-top: 100px; /* Move down to avoid overlap with the header */
+    margin-top: 120px; /* Move down to avoid overlap with the header */
 }
 
 /* Section headers */
