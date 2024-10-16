@@ -27,7 +27,7 @@ header {
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
     position: fixed;
-    top: 0;
+    top: -50px; /* Move the header up */
     width: 100%;
     z-index: 1000;
     transition: top 0.3s ease; /* Smooth transition for header position */
@@ -47,11 +47,12 @@ nav a {
     color: black;
     margin: 0 15px; /* Space between header items */
     font-size: 1.1rem;
-    transition: transform 0.3s ease; /* Zoom effect on hover */
+    transition: transform 0.3s ease, color 0.3s ease; /* Zoom effect on hover */
 }
 
 nav a:hover {
     transform: scale(1.1); /* Zoom effect */
+    color: purple; /* Hover effect color */
 }
 
 .nav-purple {
@@ -142,7 +143,7 @@ section.contacto:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background-color: white; /* Solid white background in light mode */
     color: black;
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -159,6 +160,7 @@ footer {
     header {
         background-color: black;
         color: white;
+        top: -50px; /* Move the header up in dark mode */
     }
 
     nav a {
@@ -166,7 +168,7 @@ footer {
     }
 
     nav a:hover {
-        color: #ccc;
+        color: #ccc; /* Light color on hover */
     }
 
     .countdown {
@@ -182,7 +184,7 @@ footer {
     }
 
     footer {
-        background-color: black;
+        background-color: black; /* Solid dark background in dark mode */
         color: white;
     }
 
