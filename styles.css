@@ -126,7 +126,7 @@ h2 {
 /* Mobile styling */
 @media (max-width: 768px) {
     body {
-        padding-top: 90px; /* Move the page down so the header doesn't overlap with section text */
+        padding-top: 115px; /* Move the page down so the header doesn't overlap with section text */
     }
 
     header {
