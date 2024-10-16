@@ -5,7 +5,7 @@ body {
     font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
-    padding-top: 75px; /* Added padding to move the whole page down */
+    padding-top: 70px; /* Added padding to move the whole page down */
     background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_light.jpg'); /* Light mode background image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Prevent repeating the image */
@@ -46,7 +46,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    margin: 0 25px; /* Increased space between header items for more spacing */
+    margin: 0 20px; /* Increased space between header items */
     font-size: 1.1rem;
     transition: transform 0.3s ease, color 0.3s ease; /* Zoom effect on hover */
 }
@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 .countdown {
-    margin-top: 15px; /* Increased spacing between timer and navigation links */
+    margin-top: 10px;
     font-size: 1rem;
     color: black;
 }
