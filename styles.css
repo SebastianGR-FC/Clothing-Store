@@ -1,23 +1,24 @@
 /* General styling */
 body {
-    background-color: #FFFFE4; /* Set the background color as #FFFFE4 */
-    color: black; /* Black text */
-    font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+    background-color: white; /* Set white background for light mode */
+    color: black; /* Black text for light mode */
+    font-family: 'Press Start 2P', cursive; /* Retro 2000s pixelated font */
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    background-image: url('https://github.com/SebastianGR-FC/Clothing-Store/raw/main/images/background/background_light.jpg'); /* Light mode background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-attachment: fixed; /* Fix the background image in place */
+    background-position: center center; /* Center the image */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background and text color */
 }
 
-/* Smooth scrolling */
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
-/* Header styling */
+/* Header */
 header {
     background-color: white; /* Solid white background */
     color: black; /* Black text */
@@ -25,97 +26,96 @@ header {
     text-align: center;
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for header */
+    position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
+/* Navigation links */
 nav {
-    margin-top: 10px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the buttons */
 }
 
 nav a {
+    color: black; /* Black nav links */
+    margin: 10px; /* Add some margin for spacing */
     text-decoration: none;
-    color: black;
-    margin: 0 15px;
-    font-size: 1.1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition for scaling and color */
 }
 
-.nav-link:hover {
-    text-decoration: underline;
+nav a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    color: #ff5733; /* Change to bright orange on hover */
 }
 
-.nav-purple {
-    color: purple; /* Set "Contacto" to purple */
-}
-
-.countdown {
-    margin-top: 10px;
-    font-size: 1rem;
-}
-
-/* Section styling */
-section {
-    padding: 100px 20px;
+/* Section headings */
+h2 {
     text-align: center;
+    margin: 50px 0 20px;
+    font-size: 1.5rem;
 }
 
-/* Product grid styling */
+/* Product Grid */
 .product-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between items */
+    margin: 0 10px;
+    justify-items: center;
 }
 
+/* Product Card */
 .product {
     background-color: white;
     padding: 10px;
-    border: 1px solid #ddd;
-    width: 200px;
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
 }
 
 .product img {
-    width: 100%;
-    height: auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
-.product:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.product p {
+    margin: 5px 0;
 }
 
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+/* Contact Section */
+#contact {
     text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.2rem;
-    }
+#contact a {
+    color: black; /* Black for contrast */
+}
 
-    nav a {
-        font-size: 0.9rem;
-        margin: 0 10px;
-    }
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
 
-    .product {
-        width: 150px;
-    }
+/* Countdown Timer Styles */
+#countdown-timer {
+    font-family: 'Press Start 2P', cursive; /* Matching font */
+    color: #ff5733; /* Bright orange for the retro vibe */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cool shadow effect */
+    z-index: 10;
+}
+
+#countdown-timer span {
+    color: #00ff00; /* Bright green text */
 }
