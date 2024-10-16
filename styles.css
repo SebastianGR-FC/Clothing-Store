@@ -46,7 +46,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    margin: 0 20px; /* Increased space between header items */
+    margin: 0 25px; /* Increased space between header items for more spacing */
     font-size: 1.1rem;
     transition: transform 0.3s ease, color 0.3s ease; /* Zoom effect on hover */
 }
@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 .countdown {
-    margin-top: 10px;
+    margin-top: 15px; /* Increased spacing between timer and navigation links */
     font-size: 1rem;
     color: black;
 }
