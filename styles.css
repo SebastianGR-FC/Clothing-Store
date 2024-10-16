@@ -126,22 +126,25 @@ h2 {
 /* Mobile styling */
 @media (max-width: 768px) {
     header {
-        font-size: 1.3rem; /* Adjust font size for mobile */
+        font-size: 1.8rem; /* Increased font size for mobile */
         text-align: center; /* Center the header on mobile */
+        padding: 10px; /* Adjust padding for mobile */
     }
 
     header h1 {
-        font-size: 1.8rem; /* Adjust font size for header title on mobile */
+        font-size: 2rem; /* Increased font size for header title */
+        text-align: center; /* Ensure the header is centered */
     }
 
     .countdown {
-        font-size: 1.1rem; /* Adjust countdown font size for mobile */
+        font-size: 1.5rem; /* Adjusted countdown font size */
         display: block; /* Separate lines for mobile */
+        text-align: center; /* Center the countdown text */
     }
 
     .countdown span {
-        display: block; /* Make each part of the countdown stack vertically */
-        text-align: center; /* Center text */
+        display: block; /* Make countdown items stack vertically */
+        text-align: center;
     }
 
     .product-grid {
@@ -155,6 +158,11 @@ h2 {
         width: 100%;
         max-width: 400px;
         margin: 10px 0;
+    }
+
+    /* Hide "nuevos artículos en:" text on mobile */
+    .nuevos-articulos-text {
+        display: none;
     }
 }
 
