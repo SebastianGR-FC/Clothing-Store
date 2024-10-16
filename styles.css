@@ -30,9 +30,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for header */
     transition: top 0.3s ease; /* Smooth transition for header position */
-}
 }
 
 header h1 {
@@ -47,7 +45,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    margin: 0 15px; /* Reverted space between header items */
+    margin: 0 15px; /* Space between header items */
     font-size: 1.1rem;
     transition: transform 0.3s ease; /* Zoom effect on hover */
 }
@@ -68,14 +66,14 @@ nav a:hover {
 
 /* Section styling */
 section {
-    padding: 100px 20px;
+    padding: 100px 20px; /* Padding for sections */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for sections */
     font-size: 1.1rem;
     position: relative;
     z-index: 1;
     transition: background-color 0.3s ease; /* Transition for section background */
-    margin-bottom: 20px; /* Increased space between different rows */
+    margin: 0; /* Remove margin to avoid gaps */
 }
 
 /* Section headers */
@@ -176,7 +174,7 @@ footer {
     }
 
     section {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.7); /* Dark mode section background */
     }
 
     h2 {
