@@ -45,7 +45,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    margin: 0 30px; /* Increased space between header items */
+    margin: 0 15px; /* Reverted space between header items */
     font-size: 1.1rem;
     transition: transform 0.3s ease; /* Zoom effect on hover */
 }
@@ -73,6 +73,7 @@ section {
     position: relative;
     z-index: 1;
     transition: background-color 0.3s ease; /* Transition for section background */
+    margin-bottom: 20px; /* Increased space between different rows */
 }
 
 /* Section headers */
@@ -82,6 +83,15 @@ h2 {
     color: black; /* Black section headers */
     position: relative;
     z-index: 2; /* Ensure section header stays above background images */
+}
+
+/* Hover effect for specific sections */
+section.playeras:hover,
+section.pantalones:hover,
+section.contacto:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
+    transform: scale(1.02); /* Slight scaling on hover */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
 /* Product grid styling */
@@ -160,7 +170,7 @@ footer {
     }
 
     .countdown {
-        color: black; /* Change timer color to black in dark mode */
+        color: white; /* Change timer color to white in dark mode */
     }
 
     section {
