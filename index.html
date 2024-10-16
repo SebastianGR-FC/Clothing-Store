@@ -24,7 +24,7 @@
     <nav>
         <a class="nav-link" href="#playeras">Playeras</a>
         <a class="nav-link" href="#pantalones">Pantalones</a>
-        <a class="nav-link nav-purple" href="#contact">Contacto</a> <!-- Changed to purple -->
+        <a class="nav-link nav-purple" href="#contact">Contacto</a>
     </nav>
     <div id="countdown-timer" class="countdown">Próxima entrega en: <span id="timer"></span></div> <!-- Countdown Timer -->
   </header>
@@ -144,16 +144,15 @@
         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-        const milliseconds = Math.floor((timeLeft % 1000)); // Milliseconds
 
         // Format the time string
-        const timeString = `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms`;
+        const timeString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
         // Update the timer element
         document.getElementById('timer').textContent = timeString;
 
-        // Call the function every millisecond to update the timer in real-time
-        setTimeout(updateCountdown, 10);
+        // Call the function every second to update the timer in real-time
+        setTimeout(updateCountdown, 1000);
     }
 
     // Call the function to start the countdown on page load
