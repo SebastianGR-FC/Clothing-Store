@@ -133,6 +133,11 @@ h2 {
         font-size: 1.8rem; /* Increased font size for mobile */
         text-align: center; /* Center the header on mobile */
         padding: 10px; /* Adjust padding for mobile */
+        position: fixed; /* Keep the header fixed at the top on mobile */
+        top: 0; /* Ensure the header is at the top */
+        width: 100%; /* Ensure it spans the full width */
+        z-index: 1000; /* Ensure it stays above other content */
+        background-color: white; /* Solid background color */
     }
 
     header h1 {
