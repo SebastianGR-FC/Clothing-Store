@@ -22,7 +22,7 @@ html {
 header {
     background-color: white; /* Solid white background */
     color: black; /* Black text */
-    padding: 30px; /* Increased padding for more space */
+    padding: 20px; /* Standard padding */
     text-align: center;
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -75,6 +75,11 @@ section {
     z-index: 1;
     transition: background-color 0.3s ease; /* Transition for section background */
     margin-bottom: 20px; /* Space between sections */
+}
+
+/* Playeras Section styling */
+.section-playeras {
+    margin-top: 100px; /* Move down to avoid overlap with the header */
 }
 
 /* Section headers */
