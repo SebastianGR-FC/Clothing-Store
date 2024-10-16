@@ -17,12 +17,6 @@
     gtag('js', new Date());
     gtag('config', 'G-35ZDRH0CL3');
   </script>
-  <style>
-    /* Add this CSS rule to your styles.css file or within the <style> tags */
-    .nav-purple {
-        color: purple; /* Change the color to purple */
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -30,8 +24,9 @@
     <nav>
         <a class="nav-link" href="#playeras">Playeras</a>
         <a class="nav-link" href="#pantalones">Pantalones</a>
-        <a class="nav-link nav-purple" href="#contact">Contacto</a> <!-- Added class here -->
+        <a class="nav-link nav-purple" href="#contact">Contacto</a>
     </nav>
+    <div id="countdown-timer" class="countdown">Próxima entrega en: <span id="timer"></span></div> <!-- Countdown Timer -->
   </header>
 
   <section id="playeras">
@@ -116,6 +111,52 @@
             window.scrollTo(0, 0); // Scroll to top
         }, 0); // Small delay to ensure scroll to top works
     };
+
+    // Function to calculate the time remaining until next Friday at 6 PM
+    function getNextDropTime() {
+        const now = new Date();
+        const dayOfWeek = now.getUTCDay();
+        const hours = now.getUTCHours();
+        
+        // Mexico City is UTC-6
+        const timeOffsetMexicoCity = 6 * 60 * 60 * 1000; // UTC -6 in milliseconds
+        const mexicoCityTime = new Date(now.getTime() - timeOffsetMexicoCity);
+
+        // Get the next Friday at 6 PM (Mexico City time)
+        let nextFriday = new Date(mexicoCityTime);
+        nextFriday.setDate(mexicoCityTime.getDate() + (5 - dayOfWeek + 7) % 7); // Set to next Friday
+        nextFriday.setHours(18, 0, 0, 0); // Set to 6 PM
+
+        // If it's past 6 PM on Friday, move to the next week
+        if (mexicoCityTime > nextFriday) {
+            nextFriday.setDate(nextFriday.getDate() + 7);
+        }
+
+        // Return the difference in milliseconds between now and next Friday at 6 PM
+        return nextFriday.getTime() - mexicoCityTime.getTime();
+    }
+
+    // Function to update the countdown timer
+    function updateCountdown() {
+        const timeLeft = getNextDropTime();
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Format the time string
+        const timeString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        // Update the timer element
+        document.getElementById('timer').textContent = timeString;
+
+        // Call the function every second to update the timer in real-time
+        setTimeout(updateCountdown, 1000);
+    }
+
+    // Call the function to start the countdown on page load
+    updateCountdown();
   </script>
 </body>
 </html>
