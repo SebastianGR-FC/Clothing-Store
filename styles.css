@@ -22,12 +22,12 @@ html {
 header {
     background-color: white; /* Solid white background */
     color: black; /* Black text */
-    padding: 20px;
+    padding: 30px; /* Increased padding for more space */
     text-align: center;
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
     position: fixed;
-    top: -50px; /* Move the header up */
+    top: 0; /* Keep header at the top */
     width: 100%;
     z-index: 1000;
     transition: top 0.3s ease; /* Smooth transition for header position */
@@ -45,7 +45,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    margin: 0 15px; /* Space between header items */
+    margin: 0 20px; /* Increased space between header items */
     font-size: 1.1rem;
     transition: transform 0.3s ease, color 0.3s ease; /* Zoom effect on hover */
 }
@@ -74,7 +74,7 @@ section {
     position: relative;
     z-index: 1;
     transition: background-color 0.3s ease; /* Transition for section background */
-    margin: 0; /* Remove margin to avoid gaps */
+    margin-bottom: 20px; /* Space between sections */
 }
 
 /* Section headers */
@@ -149,6 +149,14 @@ footer {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Contactanos Section */
+.contactanos {
+    background-color: white; /* Solid white background for contact section in light mode */
+    color: black; /* Text color for contact section */
+    padding: 20px;
+    text-align: center;
+}
+
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
     body {
@@ -160,7 +168,7 @@ footer {
     header {
         background-color: black;
         color: white;
-        top: -50px; /* Move the header up in dark mode */
+        top: 0; /* Keep header at the top in dark mode */
     }
 
     nav a {
@@ -186,6 +194,13 @@ footer {
     footer {
         background-color: black; /* Solid dark background in dark mode */
         color: white;
+    }
+
+    .contactanos {
+        background-color: black; /* Solid dark background for contact section in dark mode */
+        color: white; /* Text color for contact section in dark mode */
+        padding: 20px;
+        text-align: center;
     }
 
     .product {
