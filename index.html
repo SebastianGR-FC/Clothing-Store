@@ -22,25 +22,86 @@
     </nav>
   </header>
 
-  <!-- Product sections remain unchanged -->
+  <!-- All product sections remain exactly the same -->
   <section id="playeras">
     <h2>Playeras</h2>
     <div class="product-grid">
-      <!-- Product items same as original -->
+      <!-- Original product entries preserved -->
+      <div class="product">
+        <img src="images/shirt1.png" alt="Playera Oversize">
+        <p><strong>Playera Oversize</strong></p>
+        <p>$80</p>
+        <p>Talla: XXL</p>
+        <p>Estilo: Oversize</p>
+      </div>
+      <div class="product">
+        <img src="images/shirt4.png" alt="Playera Marvel">
+        <p><strong>Playera Marvel</strong></p>
+        <p>$80</p>
+        <p>Talla: M</p>
+      </div>
+      <div class="product">
+        <img src="images/shirt3.png" alt="Playera Carhartt">
+        <p><strong>Playera Carhartt</strong></p>
+        <p>$150</p>
+        <p>Talla: M</p>
+      </div>
+      <div class="product">
+        <img src="images/shirt2.png" alt="Camisa Timberland">
+        <p><strong>Camisa Timberland</strong></p>
+        <p>$150</p>
+        <p>Talla: S</p>
+      </div>
+      <div class="product">
+        <img src="images/shirt5.png" alt="Playera 1">
+        <p><strong>Playera Polo Ralph Lauren</strong></p>
+        <p>$450</p>
+        <p>Talla: L</p>
+      </div>
     </div>
   </section>
 
   <section id="chamarras">
     <h2>Chamarras</h2>
     <div class="product-grid">
-      <!-- Product items same as original -->
+      <div class="product">
+        <img src="images/sweater1.png" alt="Sweater Patagonia">
+        <p><strong>Sweater Patagonia</strong></p>
+        <p>$350</p>
+        <p>Talla: M</p>
+      </div>
+      <div class="product">
+        <img src="images/jacket1.png" alt="Chamarra Tommy Hilfiger">
+        <p><strong>Chamarra Tommy Hilfiger</strong></p>
+        <p>$400</p>
+        <p>Talla: L</p>
+      </div>
+      <div class="product">
+        <img src="images/jacket2.png" alt="Chamarra 2">
+        <p><strong>Chamarra Galyan's</strong></p>
+        <p>$600</p>
+        <p>Talla: M</p>
+        <p>Hecho en U.S.A.</p>
+      </div>
     </div>
   </section>
 
   <section id="pantalones">
     <h2>Pantalones</h2>
     <div class="product-grid">
-      <!-- Product items same as original -->
+      <div class="product">
+        <img src="images/pants1.png" alt="Pantalones 1">
+        <p><strong>Pantalones Skateboard</strong></p>
+        <p>$400</p>
+        <p>Talla: 30</p>
+        <p>Hecho en Korea</p>
+      </div>
+      <div class="product">
+        <img src="images/shorts1.png" alt="Short The North Face">
+        <p><strong>Shorts The North Face</strong></p>
+        <p>$300</p>
+        <p>Talla: 36</p>
+      </div>
     </div>
   </section>
 
@@ -55,7 +116,7 @@
   </footer>
 
   <script>
-    // Smooth scrolling
+    // Preserved smooth scrolling functionality
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -66,14 +127,14 @@
         });
     });
 
-    // Initial scroll to top
+    // Maintained scroll to top on load
     window.onload = function() {
         setTimeout(function() {
             window.scrollTo(0, 0);
         }, 0);
     };
 
-    // Header scroll behavior
+    // Preserved header hide/show on scroll
     let lastScrollTop = 0;
     const header = document.querySelector('header');
     window.addEventListener('scroll', function() {
